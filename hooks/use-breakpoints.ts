@@ -6,13 +6,13 @@ import { useEffect, useState } from "react";
  * Inspired by https://usehooks.com/useMedia/
  * https://gist.github.com/gragland/ed8cac563f5df71d78f4a1fefa8c5633
  */
-export function useMediaQuery(query) {
+export function useMediaQuery(query: string) {
   const [matches, setMatches] = useState(false);
   useEffect(
     () => {
       const mediaQuery = window.matchMedia(query);
       setMatches(mediaQuery.matches);
-      const handler = (event) => setMatches(event.matches);
+      const handler = (event: MediaQueryListEvent) => setMatches(event.matches);
       mediaQuery.addEventListener("change", handler);
       return () => mediaQuery.removeEventListener("change", handler);
     },
