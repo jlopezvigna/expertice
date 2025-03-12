@@ -1,0 +1,117 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "caseStudies": "Casos de Éxito",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "language": {
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "footer": {
+    "titles": {
+      "services": "Servicios",
+      "company": "Empresa",
+      "support": "Soporte"
+    },
+    "navigation": {
+      "faq": "Preguntas Frecuentes",
+      "termConditions": "Términos y Condiciones",
+      "privacyPolicy": "Política de Privacidad",
+      "pageNotFound": "404"
+    },
+    "subtitle": "Construimos soluciones escalables, computación de borde y flujos de trabajo impulsados por IA.",
+    "copyright": "Copyright Expertice. Todos los derechos reservados."
+  },
+  "features": {
+    "title": "Nuestra diversa suite de soluciones financieras",
+    "subtitle": "Descubre nuestras amplias herramientas financieras. Experimenta una gestión financiera fluida, fácil de usar y eficiente al alcance de tu mano.",
+    "badge": "Servicios",
+    "exploreNow": "Explorar Ahora",
+    "techSupport": {
+      "title": "Soporte Técnico",
+      "description": "Soporte para sistemas operativos, bases de datos, servidores de aplicaciones, mesa de ayuda."
+    },
+    "infrastructure": {
+      "title": "Infraestructura",
+      "description": "Especialistas certificados en virtualización, configuración, seguridad y mantenimiento continuo."
+    },
+    "softwareArchitecture": {
+      "title": "Arquitectura de Software",
+      "description": "Consultoría experta, capacitación, desarrollo y soporte para automatizar procesos de negocio."
+    },
+    "redHatSolutions": {
+      "title": "Soluciones Red Hat",
+      "description": "Red Hat Enterprise Linux, OpenShift y otros productos Red Hat."
+    },
+    "itServiceManagement": {
+      "title": "Gestión de Servicios TI",
+      "description": "Gestión de servicios TI, incluyendo gestión de incidentes, gestión de problemas y gestión de cambios."
+    },
+    "tailoredDevelopment": {
+      "title": "Desarrollo a Medida",
+      "description": "Aplicaciones móviles personalizadas para iOS y Android, adaptadas a las necesidades de tu negocio."
+    }
+  },
+  "page404": {
+    "title": "Página no encontrada",
+    "description": "Intenta volver a la página de inicio.",
+    "button": "Ir a la página de inicio"
+  },
+  "about": {
+    "badge": "Sobre Nosotros",
+    "title": "Innovando a través de Tecnología y Experiencia",
+    "description": "En Expertice S.A., conectamos ideas con tecnología. Como empresa líder en consultoría tecnológica en América Latina, nos especializamos en infraestructura, arquitectura de software y migraciones de sistemas.",
+    "description2": "Brindamos consultoría, desarrollo y soporte para ayudar a las empresas a optimizar operaciones, mejorar la productividad y maximizar sus inversiones tecnológicas.",
+    "learnMore": "Saber Más",
+    "companyCheck": {
+      "years": "15 años de experiencia",
+      "clients": "Más de 3000 Clientes"
+    }
+  },
+  "caseStudies": {
+    "badge": "Casos de Éxito",
+    "title": "Lo que Dicen Nuestros Clientes",
+    "description": "Miles de personas ya confían en Expertice."
+  },
+  "carouselCaseStudies": {
+    "industry": {
+      "fintech": "Fintech",
+      "airlines": "Aerolíneas",
+      "healthcare": "Salud",
+      "logistics": "Logística"
+    },
+    "quote": {
+      "prontoPago": "Trabajamos en el proceso de aumentar sus capacidades de innovación y construcción ágil de soluciones de software modernas para apoyar su crecimiento y la Transformación Digital de sus Clientes. Expertice S.A. fue elegida para llevar a cabo la adopción de prácticas DevOps, con el fin de incorporar una cultura de trabajo integral orientada a mejorar el Time-to-Market y la Calidad del Producto. Seleccionamos Red Hat Openshift, una plataforma de desarrollo y ejecución de aplicaciones específicamente diseñada para soportar estas prácticas, y 3Scale para construir APIs para exponer funcionalidades que pueden ser reutilizadas, monetizadas, con la capacidad de orquestar servicios y realizar transformaciones.",
+      "aerolineasArgentinas": "Llevamos 15 años brindando servicios de TI, tecnología y software. Proporcionando programadores, suscripciones Red Hat, la suite completa de InvGate, implementando Assets y Service Desk, una plataforma donde brindamos consultoría y soporte diario. También formamos el servicio de mesa de ayuda y soporte en sitio para microinformática con un equipo de más de treinta recursos.",
+      "farmacity": "Brindamos servicio en sitio para la plataforma regional E2E, proporcionando gestión de incidentes y administración, soporte técnico y operativo al departamento de TI con tareas relacionadas con la infraestructura tecnológica de Red Hat para la solución E2E (JBoss Application Server / JBoss Data Grid / Satellite Puppet) con transferencia de conocimiento de los productos Red Hat mencionados.",
+      "dhl": "Brindamos servicio en sitio para la plataforma regional E2E, proporcionando gestión de incidentes y administración, soporte técnico y operativo al departamento de TI con tareas relacionadas con la infraestructura tecnológica de Red Hat para la solución E2E (JBoss Application Server / JBoss Data Grid / Satellite Puppet) con transferencia de conocimiento de los productos Red Hat mencionados."
+    }
+  },
+  "ctaBanner": {
+    "title": "Encontremos más cosas que nos unan.",
+    "description": "Conéctate con nosotros para descubrir cómo nuestra experiencia en desarrollo de software puede ayudar a tu negocio a crecer. Desde aplicaciones móviles hasta soluciones empresariales, estamos aquí para dar vida a tu visión.",
+    "button": "Contáctanos"
+  },
+  "lastBlogs": {
+    "badge": "De Nuestro Blog",
+    "title": "Últimos Artículos",
+    "button": "Más Actualizaciones"
+  },
+  "hero": {
+    "badge": "ÚNETE AL FUTURO",
+    "ideas": "Ideas.",
+    "solutions": "Soluciones.",
+    "innovations": "Innovaciones.",
+    "subtitle": "Construimos soluciones escalables, computación de borde y flujos de trabajo impulsados por IA.",
+    "button": "Contáctanos"
+  },
+  "chatPreview": {
+    "message1": "¡Hola! ¿Cómo podemos ayudar a acelerar tu transformación digital?",
+    "message2": "Necesitamos una plataforma web de alto rendimiento con automatización impulsada por IA.",
+    "message3": "Construimos soluciones escalables utilizando Next.js, computación de borde y flujos de trabajo impulsados por IA."
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "language": {
+    "es": "Spanish",
+    "en": "English"
+  },
+  "footer": {
+    "titles": {
+      "services": "Services",
+      "company": "Company",
+      "support": "Support"
+    },
+    "navigation": {
+      "faq": "FAQ",
+      "termConditions": "Term & Conditions",
+      "privacyPolicy": "Privacy Policy",
+      "pageNotFound": "404"
+    },
+    "subtitle": "We build scalable solutions, edge computing, and AI-powered workflows.",
+    "copyright": "Copyright Expertice. All right reserved."
+  },
+  "features": {
+    "title": "Our diverse suite of finance solutions",
+    "subtitle": "Discover our wide-ranging financial tools. Experience seamless, user-friendly, and efficient financial management at your fingertips.",
+    "badge": "Services",
+    "exploreNow": "Explore Now",
+    "techSupport": {
+      "title": "Tech Support",
+      "description": "Support for operating systems, databases, application servers, help desks."
+    },
+    "infrastructure": {
+      "title": "Infrastructure",
+      "description": "Certified specialists in virtualization, configuration, security, and ongoing maintenance."
+    },
+    "softwareArchitecture": {
+      "title": "Software Architecture",
+      "description": "Expert consulting, training, development, and support to automate business processes."
+    },
+    "redHatSolutions": {
+      "title": "Red Hat Solutions",
+      "description": "Red Hat Enterprise Linux, OpenShift, and other Red Hat products."
+    },
+    "itServiceManagement": {
+      "title": "IT Service Management",
+      "description": "IT service management, including incident management, problem management, and change management."
+    },
+    "tailoredDevelopment": {
+      "title": "Tailored Development",
+      "description": "Customized mobile applications for iOS and Android, tailored to your business needs."
+    }
+  },
+  "page404": {
+    "title": "Page not found",
+    "description": "Try going back to the home page.",
+    "button": "Go to home page"
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Innovating Through Technology & Expertise",
+    "description": "At Expertice S.A., we connect ideas with technology. As a leading tech consulting firm in Latin America, we specialize in infrastructure, software architecture, and system migrations.",
+    "description2": "We provide consulting, development, and support to help businesses streamline operations, enhance productivity, and maximize their tech investments.",
+    "learnMore": "Learn More",
+    "companyCheck": {
+      "years": "15 years of experience",
+      "clients": "3K+ Clients"
+    }
+  },
+  "caseStudies": {
+    "badge": "Case Studies",
+    "title": "What Our Clients Say",
+    "description": "Thousands of people already trust Expertice."
+  },
+  "carouselCaseStudies": {
+    "industry": {
+      "fintech": "Fintech",
+      "airlines": "Airlines",
+      "healthcare": "Healthcare",
+      "logistics": "Logistics"
+    },
+    "quote": {
+      "prontoPago": "We worked on the process of increasing their capabilities for innovation and agile construction of modern software solutions to support their growth and Digital Transformation of their Clients. Expertice S.A. was chosen to carry out the adoption of DevOps practices, in order to incorporate a comprehensive work culture aimed at improving Time-to-Market and Product Quality. We selected Red Hat Openshift, a development and application execution platform specifically designed to support these practices, and 3Scale to build APIs to expose functionalities that can be reused, monetized, with the ability to orchestrate services and make transformations.",
+      "aerolineasArgentinas": "We have been working for 15 years providing IT services, technology, and software. Providing programmers, Red Hat subscriptions, the complete InvGate suite, implementing Assets and Service Desk, a platform where we provide consulting and support daily. We also form the help desk service and on-site support for microcomputing with a team of more than thirty resources.",
+      "farmacity": "We provide on-site service for the E2E regional platform, providing incident management and administration, technical and operational support to the IT department with tasks related to Red Hat's technological infrastructure for the E2E solution (JBoss Application Server / JBoss Data Grid / Satellite Puppet) with knowledge transfer of the mentioned Red Hat products.",
+      "dhl": "We provide on-site service for the E2E regional platform, providing incident management and administration, technical and operational support to the IT department with tasks related to Red Hat's technological infrastructure for the E2E solution (JBoss Application Server / JBoss Data Grid / Satellite Puppet) with knowledge transfer of the mentioned Red Hat products."
+    }
+  },
+  "ctaBanner": {
+    "title": "Let's find more that brings us together.",
+    "description": "Connect with us to discover how our expertise in software development can help your business grow. From mobile apps to enterprise solutions, we're here to bring your vision to life.",
+    "button": "Contact Us"
+  },
+  "lastBlogs": {
+    "badge": "From Our Blog",
+    "title": "Latest Articles",
+    "button": "More Updates"
+  },
+  "hero": {
+    "badge": "JOIN THE FUTURE",
+    "ideas": "Ideas.",
+    "solutions": "Solutions.",
+    "innovations": "Innovations.",
+    "subtitle": "We build scalable solutions, edge computing, and AI-powered workflows.",
+    "button": "Contact Us"
+  },
+  "chatPreview": {
+    "message1": "Hi! How can we help accelerate your digital transformation?",
+    "message2": "We need a high-performance web platform with AI-driven automation.",
+    "message3": "We build scalable solutions using Next.js, edge computing, and AI-powered workflows."
+  },
+  "aboutPage": {
+    "title": "About Us",
+    "description": "We are a team of experts in technology and business. We are dedicated to providing the best solutions for your business.",
+    "button": "Contact Us",
+    "cta": {
+      "title": "Ready to transform your business?",
+      "description": "Join thousands of clients who are already transforming their business with our expertise.",
+      "button": "Contact Us"
+    }
+  },
+  "cultureComponent": {
+    "title": "How we see the future",
+    "description": "En Expertice, nos esforzamos por ser líderes en la industria de la consultoría, brindando soluciones innovadoras y personalizadas que impulsen el crecimiento y el éxito de nuestros clientes. Nuestra visión es crear un futuro donde cada empresa pueda alcanzar su máximo potencial a través de la excelencia operativa y la innovación continua.",
+    "mision": {
+      "title": "Our Mision",
+      "description": "Buscamos constantemente nuevas formas de mejorar y evolucionar."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "Nos comprometemos con la más alta calidad en todo lo que hacemos."
+    }
+  },
+  "clientsComponent": {
+    "title": "Trusted by leading companies"
+  },
+  "common": {
+    "industry": {
+      "fintech": "Fintech",
+      "airlines": "Airlines",
+      "healthcare": "Healthcare",
+      "logistics": "Logistics",
+      "banks": "Banks",
+      "ecommerce": "Ecommerce",
+      "beverages": "Beverages",
+      "metals": "Metals"
+    }
+  },
+  "blogPage": {
+    "title": "Our Blog"
+  }
+}
