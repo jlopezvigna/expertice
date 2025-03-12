@@ -14,7 +14,7 @@ export default function SoftwareArchitecturePage() {
       <ServiceFeature
         title="Training & Continuous Support"
         description="En un entorno de constante cambio tecnológico, mantener actualizado a su equipo es clave. La falta de formación limita el crecimiento y aumenta la dependencia de talento externo. Además, la escasez de técnicos incrementa la rotación de personal, haciendo esencial la inversión en capacitación."
-        imageSrc="https://fakeimg.pl/800x600/0066ff,128/ffffff,255/?text=Process+Automation"
+        imageSrc="/services/woman-call-center.jpg"
         imageAlt="Process automation workflow diagram"
         icon={<Workflow className="w-7 h-7 text-blue-500" />}
         checkList={[
@@ -27,7 +27,7 @@ export default function SoftwareArchitecturePage() {
       <ServiceFeature
         title="Consulting & Assessment"
         description="Asegurar que su infraestructura tecnológica sea escalable, segura y eficiente es clave para mantener la competitividad. Nuestro equipo de expertos analiza su ecosistema digital para optimizar su rendimiento y alinearlo con sus objetivos de negocio."
-        imageSrc="https://fakeimg.pl/800x600/0066ff,128/ffffff,255/?text=Custom+Software"
+        imageSrc="/services/woman-call-center.jpg"
         imageAlt="Custom software development interface"
         icon={<Code className="w-7 h-7 text-blue-500" />}
         reversed

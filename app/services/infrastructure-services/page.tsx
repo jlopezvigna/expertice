@@ -14,7 +14,7 @@ export default function InfrastructureServicesPage() {
       <ServiceFeature
         title="Plataforma en la Nube"
         description="Implementamos IaaS y PaaS para brindar infraestructura y plataformas escalables según la demanda de su negocio."
-        imageSrc="https://fakeimg.pl/800x600/0066ff,128/ffffff,255/?text=Virtualization"
+        imageSrc="/services/woman-call-center.jpg"
         imageAlt="Virtualization management interface"
         icon={<Server className="w-7 h-7 text-blue-500" />}
         checkList={[
@@ -27,7 +27,7 @@ export default function InfrastructureServicesPage() {
       <ServiceFeature
         title="Consulting – Evaluación "
         description="Analizamos su infraestructura a nivel de arquitectura, integración, rendimiento y seguridad para garantizar su eficiencia."
-        imageSrc="https://fakeimg.pl/800x600/0066ff,128/ffffff,255/?text=Security+%26+Compliance"
+        imageSrc="/services/woman-call-center.jpg"
         imageAlt="Security monitoring dashboard"
         icon={<Shield className="w-7 h-7 text-blue-500" />}
         reversed
