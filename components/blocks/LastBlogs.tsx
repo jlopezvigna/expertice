@@ -5,42 +5,39 @@ import { InteractiveHoverButton } from "@/components/magic/interactive-button";
 import { Badge } from "@/components/ui/badge";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BlogCard } from "../others/BlogCard";
 import { useTranslations } from "next-intl";
 import Routes from "@/constants/routes";
 
-const blogPosts = [
-  {
-    title: "A Guide to Mastering Investment Tracking fdfdfdf",
-    description:
-      "Discover the best practices for managing your investments and achieving financial success.",
-    image: "/blog/blog-1.jpg",
-    href: "/blog/mastering-investment-tracking",
-    gradient: "from-yellow-500/20 to-orange-500/20",
-  },
-  {
-    title: "Start Planning for Retirement Today",
-    description:
-      "Learn how to start planning for retirement today to secure your financial future.",
-    image: "/blog/blog-2.jpg",
-    href: "/blog/start-planning-for-retirement-today",
-    gradient: "from-teal-500/20 to-blue-500/20",
-  },
-  {
-    title: "Regain Control with Debt Management",
-    description:
-      "Learn how to regain control of your finances and achieve debt freedom.",
-    image: "/blog/blog-3.jpg",
-    href: "/blog/regain-control-with-debt-management",
-    gradient: "from-pink-500/20 to-purple-500/20",
-  },
-];
+interface BlogPost {
+  title: string;
+  description: string;
+  date: string;
+  category: string;
+  readTime: string;
+  image: string;
+  href: string;
+}
 
 export default function LastBlogs() {
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const t = useTranslations("lastBlogs");
+
+  useEffect(() => {
+    const loadPosts = async () => {
+      try {
+        const response = await fetch("/api/posts");
+        const posts = await response.json();
+        setBlogPosts(posts);
+      } catch (error) {
+        console.error("Error loading posts:", error);
+      }
+    };
+    loadPosts();
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -90,6 +87,7 @@ export default function LastBlogs() {
                 href={blog.href}
                 image={blog.image}
                 title={blog.title}
+                date={blog.date}
                 description={blog.description}
               />
             </BlurFade>

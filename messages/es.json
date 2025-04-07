@@ -1,117 +1,159 @@
 {
   "navigation": {
-    "home": "Inicio",
-    "about": "Nosotros",
-    "services": "Servicios",
-    "caseStudies": "Casos de Éxito",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "caseStudies": "Case Studies",
     "blog": "Blog",
-    "contact": "Contacto"
+    "contact": "Contact"
   },
   "language": {
-    "es": "Español",
-    "en": "Inglés"
+    "es": "Spanish",
+    "en": "English"
   },
   "footer": {
     "titles": {
-      "services": "Servicios",
-      "company": "Empresa",
-      "support": "Soporte"
+      "services": "Services",
+      "company": "Company",
+      "support": "Support"
     },
     "navigation": {
-      "faq": "Preguntas Frecuentes",
-      "termConditions": "Términos y Condiciones",
-      "privacyPolicy": "Política de Privacidad",
+      "faq": "FAQ",
+      "termConditions": "Term & Conditions",
+      "privacyPolicy": "Privacy Policy",
       "pageNotFound": "404"
     },
-    "subtitle": "Construimos soluciones escalables, computación de borde y flujos de trabajo impulsados por IA.",
-    "copyright": "Copyright Expertice. Todos los derechos reservados."
+    "subtitle": "We build scalable solutions, edge computing, and AI-powered workflows.",
+    "copyright": "Copyright Expertice. All right reserved."
   },
   "features": {
-    "title": "Nuestra diversa suite de soluciones financieras",
-    "subtitle": "Descubre nuestras amplias herramientas financieras. Experimenta una gestión financiera fluida, fácil de usar y eficiente al alcance de tu mano.",
-    "badge": "Servicios",
-    "exploreNow": "Explorar Ahora",
+    "title": "Our diverse suite of finance solutions",
+    "subtitle": "Discover our wide-ranging financial tools. Experience seamless, user-friendly, and efficient financial management at your fingertips.",
+    "badge": "Services",
+    "exploreNow": "Explore Now",
     "techSupport": {
-      "title": "Soporte Técnico",
-      "description": "Soporte para sistemas operativos, bases de datos, servidores de aplicaciones, mesa de ayuda."
+      "title": "Tech Support",
+      "description": "Support for operating systems, databases, application servers, help desks."
     },
     "infrastructure": {
-      "title": "Infraestructura",
-      "description": "Especialistas certificados en virtualización, configuración, seguridad y mantenimiento continuo."
+      "title": "Infrastructure",
+      "description": "Certified specialists in virtualization, configuration, security, and ongoing maintenance."
     },
     "softwareArchitecture": {
-      "title": "Arquitectura de Software",
-      "description": "Consultoría experta, capacitación, desarrollo y soporte para automatizar procesos de negocio."
+      "title": "Software Architecture",
+      "description": "Expert consulting, training, development, and support to automate business processes."
     },
     "redHatSolutions": {
-      "title": "Soluciones Red Hat",
-      "description": "Red Hat Enterprise Linux, OpenShift y otros productos Red Hat."
+      "title": "Red Hat Solutions",
+      "description": "Red Hat Enterprise Linux, OpenShift, and other Red Hat products."
     },
     "itServiceManagement": {
-      "title": "Gestión de Servicios TI",
-      "description": "Gestión de servicios TI, incluyendo gestión de incidentes, gestión de problemas y gestión de cambios."
+      "title": "IT Service Management",
+      "description": "IT service management, including incident management, problem management, and change management."
     },
     "tailoredDevelopment": {
-      "title": "Desarrollo a Medida",
-      "description": "Aplicaciones móviles personalizadas para iOS y Android, adaptadas a las necesidades de tu negocio."
+      "title": "Tailored Development",
+      "description": "Customized mobile applications for iOS and Android, tailored to your business needs."
     }
   },
   "page404": {
-    "title": "Página no encontrada",
-    "description": "Intenta volver a la página de inicio.",
-    "button": "Ir a la página de inicio"
+    "title": "Page not found",
+    "description": "Try going back to the home page.",
+    "button": "Go to home page"
   },
   "about": {
-    "badge": "Sobre Nosotros",
-    "title": "Innovando a través de Tecnología y Experiencia",
-    "description": "En Expertice S.A., conectamos ideas con tecnología. Como empresa líder en consultoría tecnológica en América Latina, nos especializamos en infraestructura, arquitectura de software y migraciones de sistemas.",
-    "description2": "Brindamos consultoría, desarrollo y soporte para ayudar a las empresas a optimizar operaciones, mejorar la productividad y maximizar sus inversiones tecnológicas.",
-    "learnMore": "Saber Más",
+    "badge": "About Us",
+    "title": "Innovating Through Technology & Expertise",
+    "description": "At Expertice S.A., we connect ideas with technology. As a leading tech consulting firm in Latin America, we specialize in infrastructure, software architecture, and system migrations.",
+    "description2": "We provide consulting, development, and support to help businesses streamline operations, enhance productivity, and maximize their tech investments.",
+    "learnMore": "Learn More",
     "companyCheck": {
-      "years": "15 años de experiencia",
-      "clients": "Más de 3000 Clientes"
+      "years": "15 years of experience",
+      "clients": "3K+ Clients"
     }
   },
   "caseStudies": {
-    "badge": "Casos de Éxito",
-    "title": "Lo que Dicen Nuestros Clientes",
-    "description": "Miles de personas ya confían en Expertice."
+    "badge": "Case Studies",
+    "title": "What Our Clients Say"
   },
   "carouselCaseStudies": {
     "industry": {
       "fintech": "Fintech",
-      "airlines": "Aerolíneas",
-      "healthcare": "Salud",
-      "logistics": "Logística"
+      "airlines": "Airlines",
+      "healthcare": "Healthcare",
+      "logistics": "Logistics"
     },
     "quote": {
-      "prontoPago": "Trabajamos en el proceso de aumentar sus capacidades de innovación y construcción ágil de soluciones de software modernas para apoyar su crecimiento y la Transformación Digital de sus Clientes. Expertice S.A. fue elegida para llevar a cabo la adopción de prácticas DevOps, con el fin de incorporar una cultura de trabajo integral orientada a mejorar el Time-to-Market y la Calidad del Producto. Seleccionamos Red Hat Openshift, una plataforma de desarrollo y ejecución de aplicaciones específicamente diseñada para soportar estas prácticas, y 3Scale para construir APIs para exponer funcionalidades que pueden ser reutilizadas, monetizadas, con la capacidad de orquestar servicios y realizar transformaciones.",
-      "aerolineasArgentinas": "Llevamos 15 años brindando servicios de TI, tecnología y software. Proporcionando programadores, suscripciones Red Hat, la suite completa de InvGate, implementando Assets y Service Desk, una plataforma donde brindamos consultoría y soporte diario. También formamos el servicio de mesa de ayuda y soporte en sitio para microinformática con un equipo de más de treinta recursos.",
-      "farmacity": "Brindamos servicio en sitio para la plataforma regional E2E, proporcionando gestión de incidentes y administración, soporte técnico y operativo al departamento de TI con tareas relacionadas con la infraestructura tecnológica de Red Hat para la solución E2E (JBoss Application Server / JBoss Data Grid / Satellite Puppet) con transferencia de conocimiento de los productos Red Hat mencionados.",
-      "dhl": "Brindamos servicio en sitio para la plataforma regional E2E, proporcionando gestión de incidentes y administración, soporte técnico y operativo al departamento de TI con tareas relacionadas con la infraestructura tecnológica de Red Hat para la solución E2E (JBoss Application Server / JBoss Data Grid / Satellite Puppet) con transferencia de conocimiento de los productos Red Hat mencionados."
+      "prontoPago": "We worked on the process of increasing their capabilities for innovation and agile construction of modern software solutions to support their growth and Digital Transformation of their Clients. Expertice S.A. was chosen to carry out the adoption of DevOps practices, in order to incorporate a comprehensive work culture aimed at improving Time-to-Market and Product Quality. We selected Red Hat Openshift, a development and application execution platform specifically designed to support these practices, and 3Scale to build APIs to expose functionalities that can be reused, monetized, with the ability to orchestrate services and make transformations.",
+      "aerolineasArgentinas": "We have been working for 15 years providing IT services, technology, and software. Providing programmers, Red Hat subscriptions, the complete InvGate suite, implementing Assets and Service Desk, a platform where we provide consulting and support daily. We also form the help desk service and on-site support for microcomputing with a team of more than thirty resources.",
+      "farmacity": "We provide on-site service for the E2E regional platform, providing incident management and administration, technical and operational support to the IT department with tasks related to Red Hat's technological infrastructure for the E2E solution (JBoss Application Server / JBoss Data Grid / Satellite Puppet) with knowledge transfer of the mentioned Red Hat products.",
+      "dhl": "We provide on-site service for the E2E regional platform, providing incident management and administration, technical and operational support to the IT department with tasks related to Red Hat's technological infrastructure for the E2E solution (JBoss Application Server / JBoss Data Grid / Satellite Puppet) with knowledge transfer of the mentioned Red Hat products."
     }
   },
   "ctaBanner": {
-    "title": "Encontremos más cosas que nos unan.",
-    "description": "Conéctate con nosotros para descubrir cómo nuestra experiencia en desarrollo de software puede ayudar a tu negocio a crecer. Desde aplicaciones móviles hasta soluciones empresariales, estamos aquí para dar vida a tu visión.",
-    "button": "Contáctanos"
+    "title": "Let's find more that brings us together.",
+    "description": "Connect with us to discover how our expertise in software development can help your business grow. From mobile apps to enterprise solutions, we're here to bring your vision to life.",
+    "button": "Contact Us"
   },
   "lastBlogs": {
-    "badge": "De Nuestro Blog",
-    "title": "Últimos Artículos",
-    "button": "Más Actualizaciones"
+    "badge": "From Our Blog",
+    "title": "Latest Articles",
+    "button": "More Updates"
   },
-  "hero": {
-    "badge": "ÚNETE AL FUTURO",
+  "heroPage": {
+    "badge": "JOIN THE FUTURE",
     "ideas": "Ideas.",
-    "solutions": "Soluciones.",
-    "innovations": "Innovaciones.",
-    "subtitle": "Construimos soluciones escalables, computación de borde y flujos de trabajo impulsados por IA.",
-    "button": "Contáctanos"
+    "solutions": "Solutions.",
+    "innovations": "Innovations.",
+    "subtitle": "We build scalable solutions, edge computing, and AI-powered workflows.",
+    "button": "Contact Us"
   },
   "chatPreview": {
-    "message1": "¡Hola! ¿Cómo podemos ayudar a acelerar tu transformación digital?",
-    "message2": "Necesitamos una plataforma web de alto rendimiento con automatización impulsada por IA.",
-    "message3": "Construimos soluciones escalables utilizando Next.js, computación de borde y flujos de trabajo impulsados por IA."
+    "message1": "Hi! How can we help accelerate your digital transformation?",
+    "message2": "We need a high-performance web platform with AI-driven automation.",
+    "message3": "We build scalable solutions using Next.js, edge computing, and AI-powered workflows."
+  },
+  "aboutPage": {
+    "title": "About Us",
+    "description": "We are a team of experts in technology and business. We are dedicated to providing the best solutions for your business.",
+    "button": "Contact Us",
+    "cta": {
+      "title": "Ready to transform your business?",
+      "description": "Join thousands of clients who are already transforming their business with our expertise.",
+      "button": "Contact Us"
+    }
+  },
+  "cultureComponent": {
+    "title": "How we see the future",
+    "description": "En Expertice, nos esforzamos por ser líderes en la industria de la consultoría, brindando soluciones innovadoras y personalizadas que impulsen el crecimiento y el éxito de nuestros clientes. Nuestra visión es crear un futuro donde cada empresa pueda alcanzar su máximo potencial a través de la excelencia operativa y la innovación continua.",
+    "mision": {
+      "title": "Our Mision",
+      "description": "Buscamos constantemente nuevas formas de mejorar y evolucionar."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "Nos comprometemos con la más alta calidad en todo lo que hacemos."
+    }
+  },
+  "clientsComponent": {
+    "title": "Trusted by leading companies"
+  },
+  "common": {
+    "industry": {
+      "fintech": "Fintech",
+      "airlines": "Airlines",
+      "healthcare": "Healthcare",
+      "logistics": "Logistics",
+      "banks": "Banks",
+      "ecommerce": "Ecommerce",
+      "beverages": "Beverages",
+      "metals": "Metals",
+      "insurance": "Insurance",
+      "consulting": "Consulting",
+      "financial": "Financial"
+    }
+  },
+  "blogPage": {
+    "title": "Our Blog"
   }
 }

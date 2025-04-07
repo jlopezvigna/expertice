@@ -60,6 +60,7 @@ const About = () => {
             >
               {t("description")}
               <br />
+              <br />
               {t("description2")}
             </motion.p>
 

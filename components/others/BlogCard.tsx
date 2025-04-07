@@ -18,7 +18,7 @@ export const BlogCard = ({
   href,
   image,
   title,
-  date = "Dec 24, 2023",
+  date = "",
   description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
   index,
 }: BlogCardProps) => {
@@ -36,10 +36,12 @@ export const BlogCard = ({
           alt={title}
           width={400}
           height={300}
-          className="w-full  object-cover rounded-2xl"
+          className="w-full h-52 object-cover rounded-2xl"
         />
         <h3 className="text-lg font-bold my-4 text-foreground">{title}</h3>
-        <h5 className="text-md  my-4 text-muted-foreground">{description}</h5>
+        <h5 className="text-md line-clamp-2 my-4 text-muted-foreground">
+          {description}
+        </h5>
         <span className="text-xs font-semibold my-4 text-primary">{date}</span>
 
         <AnimatePresence>

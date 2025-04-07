@@ -74,8 +74,7 @@
   },
   "caseStudies": {
     "badge": "Case Studies",
-    "title": "What Our Clients Say",
-    "description": "Thousands of people already trust Expertice."
+    "title": "What Our Clients Say"
   },
   "carouselCaseStudies": {
     "industry": {
@@ -99,9 +98,9 @@
   "lastBlogs": {
     "badge": "From Our Blog",
     "title": "Latest Articles",
-    "button": "More Updates"
+    "button": "View All"
   },
-  "hero": {
+  "heroPage": {
     "badge": "JOIN THE FUTURE",
     "ideas": "Ideas.",
     "solutions": "Solutions.",
@@ -148,7 +147,10 @@
       "banks": "Banks",
       "ecommerce": "Ecommerce",
       "beverages": "Beverages",
-      "metals": "Metals"
+      "metals": "Metals",
+      "insurance": "Insurance",
+      "consulting": "Consulting",
+      "financial": "Financial"
     }
   },
   "blogPage": {

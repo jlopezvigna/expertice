@@ -8,23 +8,46 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { mainNavigation } from "@/constants/navigation";
 import { Locale } from "@/i18n/config";
+import { cn } from "@/lib/utils";
 import { setUserLocale } from "@/services/locale";
 import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
 import Link from "next/link";
-import { startTransition } from "react";
+import { usePathname } from "next/navigation";
+import { startTransition, useEffect, useState } from "react";
+import ExperticeSvg from "../expertice-logo";
 import { NavigationMenu } from "./NavigationMenu";
 
 const Navbar = () => {
   const locale = useLocale();
   const t = useTranslations("navigation");
+  const [isHeroSection, setIsHeroSection] = useState<boolean>(false);
+  const pathname = usePathname();
 
-  console.count("Navbar");
+  const checkHeroSection = () => {
+    const heroSection = document.getElementById("hero");
+    if (!heroSection) {
+      setIsHeroSection(false);
+    } else {
+      const heroBottom = heroSection.getBoundingClientRect().bottom;
+      setIsHeroSection(heroBottom > 0);
+    }
+  };
+
+  useEffect(() => {
+    checkHeroSection();
+    window.addEventListener("scroll", checkHeroSection);
+    return () => window.removeEventListener("scroll", checkHeroSection);
+  }, [pathname]);
 
   const onChange = (value: string) => {
     const locale = value as Locale;
@@ -38,7 +61,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md"
+      className="fixed top-0 w-full z-50 backdrop-blur-md"
     >
       <nav className="container justify-between mx-auto h-16 flex items-center gap-8 md:justify-start">
         {/* Logo Navigation */}
@@ -48,21 +71,9 @@ const Navbar = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex items-center grow-0 gap-2"
         >
-          {/* <motion.div
-            whileHover={{ rotate: 180 }}
-            transition={{ duration: 0.3 }}
-            className="w-8 h-8 bg-primary rounded flex items-center justify-center"
-          >
-            <div className="w-4 h-4 bg-primary-foreground rounded-sm transform rotate-45"></div>
-          </motion.div> */}
-
           <Link href="/" className="text-xl font-semibold text-foreground">
-            <Image
-              src="/logos/expertice-logotipo.png"
-              alt="Expertice Logo"
-              width={120}
-              height={20}
-              layout="fixed"
+            <ExperticeSvg
+              className={cn(isHeroSection ? "text-white" : "text-foreground")}
             />
           </Link>
         </motion.div>
@@ -74,7 +85,7 @@ const Navbar = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="hidden grow md:flex items-center gap-2"
         >
-          <NavigationMenu />
+          <NavigationMenu isHeroSection={isHeroSection} />
         </motion.div>
 
         {/* Language Navigation */}
@@ -86,7 +97,9 @@ const Navbar = () => {
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Select onValueChange={onChange} defaultValue={locale}>
-              <SelectTrigger>
+              <SelectTrigger
+                className={isHeroSection ? "text-white" : "text-foreground"}
+              >
                 <SelectValue placeholder="Language" />
               </SelectTrigger>
               <SelectContent>
@@ -108,11 +121,16 @@ const Navbar = () => {
             <SheetTrigger asChild>
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                 <Button variant="ghost" size="icon" className="text-foreground">
-                  <Menu className="h-6 w-6" />
+                  <Menu
+                    className={cn(
+                      isHeroSection ? "text-white" : "text-foreground",
+                      "h-6 w-6"
+                    )}
+                  />
                 </Button>
               </motion.div>
             </SheetTrigger>
-            <SheetContent className="bg-muted border-border w-full">
+            <SheetContent className="bg-gradient-to-r from-primary to-accent-foreground border-border w-full">
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -128,12 +146,14 @@ const Navbar = () => {
                     whileHover={{ x: 5 }}
                     className="text-center p-4"
                   >
-                    <Link
-                      href={item.href}
-                      className="text-2xl font-semibold  hover:text-foreground transition-colors"
-                    >
-                      {t(item.name)}
-                    </Link>
+                    <SheetClose asChild>
+                      <Link
+                        href={item.href}
+                        className="text-2xl text-accent font-semibold hover:text-foreground transition-colors"
+                      >
+                        {t(item.name)}
+                      </Link>
+                    </SheetClose>
                   </motion.div>
                 ))}
               </motion.div>

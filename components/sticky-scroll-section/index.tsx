@@ -47,13 +47,12 @@ export default function StickyScrollSection({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl mb-8"
+            className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl mb-4"
           >
             {title}
           </motion.h2>
+          <p className="mt-4 text-lg text-muted-foreground mb-4">{subTitle}</p>
           {media && media}
-
-          <p className="mt-4 text-lg text-muted-foreground">{subTitle}</p>
         </motion.div>
 
         {/* Right column with scrollable content */}

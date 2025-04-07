@@ -1,15 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "../components/nav-bar/Navbar";
-import Footer from "../components/blocks/Footer";
-import { getMessages } from "next-intl/server";
-import { getLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
-const inter = Inter({ subsets: ["latin"] });
+import { getLocale, getMessages } from "next-intl/server";
+import { Inter, Red_Hat_Display, Poppins } from "next/font/google";
+import "./globals.css";
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+const redHatDisplay = Red_Hat_Display({
+  subsets: ["latin"],
+  variable: "--font-red-hat-display",
+  // weight: ["300", "400", "500", "700", "900"],
+});
 
 export const metadata: Metadata = {
-  title: "Financia - Evolving Finance for the Digital Era",
+  title: "Expertice - IT Solutions",
   description:
     "Discover the Future of Finance: Seamless Transactions, Innovative Solutions, and a User-Friendly Interface.",
 };
@@ -23,12 +30,12 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="scroll-smooth dark">
-      <body className={`${inter.className} antialiased`}>
+    <html lang={locale} className="scroll-smooth">
+      <body
+        className={`${inter.variable} ${poppins.variable} ${redHatDisplay.variable} antialiased`}
+      >
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
           {children}
-          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

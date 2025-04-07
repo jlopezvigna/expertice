@@ -1,6 +1,19 @@
+"use client";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { ElementType } from "react";
 
-export const BlurText = ({ text }: { text: string }) => {
+export interface BlurTextProps {
+  text: string;
+  className?: string;
+  as?: ElementType;
+}
+
+export function BlurText({
+  text,
+  className,
+  as: Component = "p",
+}: BlurTextProps) {
   return (
     <motion.div
       initial={{
@@ -17,7 +30,12 @@ export const BlurText = ({ text }: { text: string }) => {
       }}
       transition={{ duration: 0.5 }}
     >
-      <motion.p className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
+      <Component
+        className={cn(
+          "text-lg text-gray-500 mt-8 dark:text-neutral-300",
+          className
+        )}
+      >
         {text.split(" ").map((word, index) => (
           <motion.span
             key={index}
@@ -41,7 +59,7 @@ export const BlurText = ({ text }: { text: string }) => {
             {word}&nbsp;
           </motion.span>
         ))}
-      </motion.p>
+      </Component>
     </motion.div>
   );
-};
+}

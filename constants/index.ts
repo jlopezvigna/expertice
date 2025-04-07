@@ -4,7 +4,7 @@ export const messages_chat: {
 }[] = [
   { content: "message1", isUser: true },
   { content: "message2", isUser: false },
-  { content: "message3", isUser: true },
+  // { content: "message3", isUser: true },
 ];
 
 export const company_check: string[] = [
@@ -66,6 +66,36 @@ export const client_logos: {
     alt: "Loma Negra",
     name: "Loma Negra",
     industry: "industry.metals",
+  },
+  {
+    imageUrl: "/clients/dexter.svg",
+    alt: "Dexter",
+    name: "Dexter",
+    industry: "industry.ecommerce",
+  },
+  {
+    imageUrl: "/clients/byma.svg",
+    alt: "BYMA",
+    name: "BYMA",
+    industry: "industry.financial",
+  },
+  {
+    imageUrl: "/clients/cementos-avellaneda.svg",
+    alt: "Cementos Avellaneda",
+    name: "Cementos Avellaneda",
+    industry: "industry.metals",
+  },
+  {
+    imageUrl: "/clients/allianz.svg",
+    alt: "Allianz",
+    name: "Allianz",
+    industry: "industry.insurance",
+  },
+  {
+    imageUrl: "/clients/swiss-medical.svg",
+    alt: "Swiss Medical",
+    name: "Swiss Medical",
+    industry: "industry.healthcare",
   },
 ];
 

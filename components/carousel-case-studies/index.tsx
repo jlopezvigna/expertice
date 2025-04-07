@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { carouselItems } from "./constant";
 import { useTranslations } from "next-intl";
 
-export const Carousel = () => {
+export const CarouselCaseStudies = () => {
   const t = useTranslations("carouselCaseStudies");
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -37,7 +37,7 @@ export const Carousel = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-md font-medium text-muted mb-6 text-justify"
+              className="text-md font-medium text-foreground mb-6 text-justify"
             >
               {t(carouselItems[currentIndex].quote)}
             </motion.blockquote>
@@ -66,7 +66,7 @@ export const Carousel = () => {
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentIndex ? "w-8 bg-primary" : "bg-muted"
+              index === currentIndex ? "w-8 bg-primary" : "bg-primary"
             }`}
           />
         ))}

@@ -26,7 +26,7 @@ export const FeatureCard = ({
   return (
     <Link className="flex" href={`${slug}`}>
       <motion.div
-        className="relative grow overflow-hidden max-h-[400px] min-w-[200px] bg-card rounded-3xl p-8"
+        className="relative grow overflow-hidden max-h-[300px] min-w-[200px] bg-card rounded-3xl p-8 md:h-[270px]"
         onHoverStart={() => setHoveredIndex(index)}
         onHoverEnd={() => setHoveredIndex(null)}
       >
@@ -34,7 +34,9 @@ export const FeatureCard = ({
           <Icon className="w-7 h-7 text-primary" />
         </div>
         <h3 className="text-xl font-bold mb-4 text-foreground">{t(title)}</h3>
-        <p className="text-muted-foreground mb-6">{t(description)}</p>
+        <p className="text-muted-foreground md:line-clamp-3 mb-6">
+          {t(description)}
+        </p>
 
         <AnimatePresence>
           {hoveredIndex === index && (

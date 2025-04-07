@@ -1,12 +1,12 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-import { Instagram, Facebook, Linkedin } from "lucide-react";
-import { useTranslations } from "next-intl";
-import Routes from "@/constants/routes";
 import { featureNavigation, mainNavigation } from "@/constants/navigation";
+import Routes from "@/constants/routes";
 import SocialLinks from "@/constants/social";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+import ExperticeSvg from "../expertice-logo";
 
 const socials = [
   {
@@ -39,26 +39,20 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-background pt-20 pb-10 border-t border-border">
+    <footer className="bg-gradient-to-b from-primary/10 to-background pt-20 pb-10 border-t border-border">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
           {/* Logo and description */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-2 mb-4">
-              <Image
-                src="/logos/expertice-logotipo.png"
-                alt="Expertice Logo"
-                width={120}
-                height={20}
-                layout="fixed"
-              />
+              <ExperticeSvg />
             </div>
             <p className="text-muted-foreground mb-6">{t_footer("subtitle")}</p>
           </div>
 
           {/* Services */}
           <div className="md:col-span-3">
-            <h3 className="text-foreground font-semibold mb-4">
+            <h3 className="text-accent-foreground text-md font-semibold mb-4">
               {t_footer("titles.services")}
             </h3>
             <ul className="space-y-3">
@@ -66,7 +60,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground text-sm hover:text-foreground transition-colors"
                   >
                     {t_features(item.name)}
                   </Link>
@@ -77,14 +71,14 @@ const Footer = () => {
 
           {/* Company */}
           <div className="md:col-span-2">
-            <h3 className="text-foreground font-semibold mb-4">
+            <h3 className="text-accent-foreground text-md font-semibold mb-4">
               {t_footer("titles.company")}
             </h3>
             <ul className="space-y-3">
               <li>
                 <Link
                   href={Routes.Home}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground text-sm hover:text-foreground transition-colors"
                 >
                   {t("home")}
                 </Link>
@@ -93,7 +87,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground text-sm hover:text-foreground transition-colors"
                   >
                     {t(item.name)}
                   </Link>
@@ -104,7 +98,7 @@ const Footer = () => {
 
           {/* Support */}
           <div className="md:col-span-2">
-            <h3 className="text-foreground font-semibold mb-4">
+            <h3 className="text-accent-foreground text-md font-semibold mb-4">
               {t_footer("titles.support")}
             </h3>
             <ul className="space-y-3">
@@ -112,7 +106,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground text-sm hover:text-foreground transition-colors"
                   >
                     {item.name}
                   </Link>

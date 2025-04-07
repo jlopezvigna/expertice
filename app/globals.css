@@ -5,48 +5,48 @@
 @layer base {
   :root {
     /* Fondos principales */
-    --background: #ffffff;
-    --foreground: #1a2234;
+    --background: 0 0% 100%; /* #ffffff */
+    --foreground: 223 33% 15%; /* #1a2234 */
 
     /* Colores primarios */
-    --primary: #3b82f6;
-    --primary-foreground: #ffffff;
+    --primary: 196 100% 39%; /* #008fc5 */
+    --primary-foreground: 0 0% 100%; /* #ffffff */
 
     /* Colores secundarios */
-    --secondary: #f1f5f9;
-    --secondary-foreground: #1a2234;
+    --secondary: 210 27% 95%; /* #f1f5f9 */
+    --secondary-foreground: 223 33% 15%; /* #1a2234 */
 
     /* Colores de acento */
-    --accent: #dbeafe;
-    --accent-foreground: #1e40af;
+    --accent: 213 75% 92%; /* #dbeafe */
+    --accent-foreground: 210 79% 24%; /* #084273 */
 
     /* Colores de estado */
-    --destructive: #ef4444;
-    --destructive-foreground: #ffffff;
-    --success: #22c55e;
-    --success-foreground: #ffffff;
-    --warning: #f59e0b;
-    --warning-foreground: #ffffff;
+    --destructive: 0 83% 61%; /* #ef4444 */
+    --destructive-foreground: 0 0% 100%; /* #ffffff */
+    --success: 142 66% 48%; /* #22c55e */
+    --success-foreground: 0 0% 100%; /* #ffffff */
+    --warning: 39 94% 50%; /* #f59e0b */
+    --warning-foreground: 0 0% 100%; /* #ffffff */
 
     /* Colores de interfaz */
-    --muted: #f1f5f9;
-    --muted-foreground: #64748b;
-    --card: #f9fafb;
-    --card-foreground: #1a2234;
-    --popover: #ffffff;
-    --popover-foreground: #1a2234;
-    --border: #e2e8f0;
-    --input: #e2e8f0;
-    --ring: #93c5fd;
+    --muted: 210 27% 95%; /* #f1f5f9 */
+    --muted-foreground: 215 22% 50%; /* #64748b */
+    --card: 210 27% 98%; /* #f9fafb */
+    --card-foreground: 223 33% 15%; /* #1a2234 */
+    --popover: 0 0% 100%; /* #ffffff */
+    --popover-foreground: 223 33% 15%; /* #1a2234 */
+    --border: 210 27% 88%; /* #e2e8f0 */
+    --input: 210 27% 88%; /* #e2e8f0 */
+    --ring: 213 92% 76%; /* #93c5fd */
 
     /* Otros */
     --radius: 0.5rem;
 
-    --color-1: 0 100% 63%;
-    --color-2: 270 100% 63%;
-    --color-3: 210 100% 63%;
-    --color-4: 195 100% 63%;
-    --color-5: 90 100% 63%;
+    --color-1: 0, 100%, 63%;
+    --color-2: 270, 100%, 63%;
+    --color-3: 210, 100%, 63%;
+    --color-4: 195, 100%, 63%;
+    --color-5: 90, 100%, 63%;
   }
 
   .dark {
@@ -83,7 +83,7 @@
     --popover-foreground: #f8fafc;
     --border: #1e293b;
     --input: #1e293b;
-    --ring: #1e40af;
+    --ring: #ffffff;
   }
 }
 
@@ -92,6 +92,6 @@
     @apply border-border;
   }
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-inter antialiased bg-background text-foreground;
   }
 }

@@ -10,24 +10,12 @@ import ChatPreview from "../others/ChatPreview";
 import { useTranslations } from "next-intl";
 
 const Hero = () => {
-  const t = useTranslations("hero");
+  const t = useTranslations("heroPage");
   return (
-    <div className="relative min-h-screen pt-16 overflow-hidden bg-background">
-      <div className="absolute inset-0">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-          className="absolute top-1/4 -right-1/4 w-[500px] h-[500px] bg-[#2b7fff32] rounded-full blur-3xl"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.5 }}
-          className="absolute -bottom-24 -left-24 w-[400px] h-[400px] bg-[#ad46ff33] rounded-full blur-3xl"
-        />
-      </div>
-
+    <div
+      id="hero"
+      className="relative min-h-screen pt-16 overflow-hidden bg-gradient-to-r from-primary to-accent-foreground"
+    >
       <div className="container mx-auto pt-8 md:pt-20">
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Left side - Content */}
@@ -43,13 +31,15 @@ const Hero = () => {
               transition={{ duration: 0.5 }}
               className="inline-block mb-6"
             >
-              <Badge variant="secondary">{t("badge")}</Badge>
+              <Badge variant="secondary" className="text-accent-foreground">
+                {t("badge")}
+              </Badge>
             </motion.div>
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-foreground"
+              className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-background"
             >
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
@@ -77,7 +67,7 @@ const Hero = () => {
               </motion.span>
             </motion.h1>
 
-            <BlurText text={t("subtitle")} />
+            <BlurText className="text-background" text={t("subtitle")} />
           </motion.div>
 
           <ChatPreview messages={messages_chat} />
@@ -87,7 +77,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           className="absolute bottom-0 left-0 right-0"
         >
           <Marquee

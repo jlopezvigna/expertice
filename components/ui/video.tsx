@@ -8,6 +8,7 @@ interface VideoProps {
   autoPlay?: boolean;
   muted?: boolean;
   loop?: boolean;
+  controls?: boolean;
   preload?: "auto" | "metadata" | "none";
   className?: string;
   caption?: {
@@ -26,6 +27,7 @@ export function Video({
   muted = true,
   loop = true,
   preload = "auto",
+  controls = false,
   className,
 }: VideoProps) {
   return (
@@ -37,6 +39,9 @@ export function Video({
       muted={muted}
       preload={preload}
       className={cn(className)}
+      controls={controls}
+      playsInline
+      webkit-playsinline
     >
       <source src={src} type="video/mp4" />
       {caption && (

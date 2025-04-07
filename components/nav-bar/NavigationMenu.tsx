@@ -14,7 +14,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import * as React from "react";
 
-export function NavigationMenu() {
+export function NavigationMenu({ isHeroSection }: { isHeroSection: boolean }) {
   const t = useTranslations("navigation");
 
   return (
@@ -24,7 +24,11 @@ export function NavigationMenu() {
           <NavigationMenuItem key={item.name}>
             {item.submenu ? (
               <>
-                <NavigationMenuTrigger>{t(item.name)}</NavigationMenuTrigger>
+                <NavigationMenuTrigger
+                  className={isHeroSection ? "text-white" : "text-foreground"}
+                >
+                  {t(item.name)}
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                     {item.submenu.map((subItem) => (
@@ -42,7 +46,12 @@ export function NavigationMenu() {
               </>
             ) : (
               <Link href={item.href} legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink
+                  className={cn(
+                    isHeroSection ? "text-white" : "text-foreground",
+                    navigationMenuTriggerStyle()
+                  )}
+                >
                   {t(item.name)}
                 </NavigationMenuLink>
               </Link>
