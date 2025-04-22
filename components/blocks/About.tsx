@@ -4,10 +4,11 @@ import { HeroVideoDialog } from "@/components/magic/hero-video-dialog";
 import { InteractiveHoverButton } from "@/components/magic/interactive-button";
 import { Badge } from "@/components/ui/badge";
 import { company_check } from "@/constants";
+import { Link } from "@/i18n/navigation";
 import { motion, useInView } from "framer-motion";
 import { Check } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+// import Link from "next/link";
 import { useRef } from "react";
 
 const About = () => {
