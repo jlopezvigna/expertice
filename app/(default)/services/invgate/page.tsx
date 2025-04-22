@@ -23,7 +23,7 @@ export default function InvgatePage() {
         media={
           <Video
             className="rounded-2xl"
-            src="/invgate/insight.mp4"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/invgate/insight.mp4`}
             width={1000}
             height={1000}
           />

@@ -98,7 +98,7 @@ const About = () => {
             >
               <HeroVideoDialog
                 videoSrc="https://www.youtube.com/embed/1ayW0GrThyI"
-                thumbnailSrc="/about/video-preview.png"
+                thumbnailSrc={`${process.env.NEXT_PUBLIC_BASE_PATH}/about/video-preview.png`}
               />
             </motion.div>
           </div>
