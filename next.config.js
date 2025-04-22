@@ -8,7 +8,7 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: process.env.NODE_ENV === "production" ? "/expertice" : "",
-  assetPrefix: process.env.NODE_ENV === "production" ? "/expertice/_next" : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? "/expertice" : "/",
 };
 
 module.exports = nextConfig;
