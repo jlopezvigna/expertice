@@ -111,13 +111,25 @@ export const partner_logos: {
   name: string;
   alt: string;
 }[] = [
-  { imageUrl: "expertice/partners/oracle.svg", name: "Oracle", alt: "Oracle" },
-  { imageUrl: "/expertice/ibm.svg", name: "IBM", alt: "IBM" },
-  { imageUrl: "/invgate.svg", name: "InvGate", alt: "InvGate" },
-  { imageUrl: "/partners/lenovo.svg", name: "Lenovo", alt: "Lenovo" },
-  { imageUrl: "/partners/microsoft.svg", name: "Microsoft", alt: "Microsoft" },
-  { imageUrl: "/partners/redhat.svg", name: "Red Hat", alt: "Red Hat" },
-  { imageUrl: "/partners/veeam.svg", name: "Veeam", alt: "Veeam" },
+  { imageUrl: "/expertice/partners/oracle.svg", name: "Oracle", alt: "Oracle" },
+  { imageUrl: "/expertice/partners/ibm.svg", name: "IBM", alt: "IBM" },
+  {
+    imageUrl: "/expertice/partners/invgate.svg",
+    name: "InvGate",
+    alt: "InvGate",
+  },
+  { imageUrl: "/expertice/partners/lenovo.svg", name: "Lenovo", alt: "Lenovo" },
+  {
+    imageUrl: "/expertice/partners/microsoft.svg",
+    name: "Microsoft",
+    alt: "Microsoft",
+  },
+  {
+    imageUrl: "/expertice/partners/redhat.svg",
+    name: "Red Hat",
+    alt: "Red Hat",
+  },
+  { imageUrl: "/expertice/partners/veeam.svg", name: "Veeam", alt: "Veeam" },
 ];
 
 export const invgate_leader_logos: {

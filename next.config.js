@@ -7,7 +7,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/expertice",
+  basePath: process.env.NODE_ENV === "production" ? "/expertice" : "",
 };
 
 module.exports = nextConfig;
