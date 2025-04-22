@@ -111,7 +111,7 @@ export const partner_logos: {
   name: string;
   alt: string;
 }[] = [
-  { imageUrl: "/partners/oracle.svg", name: "Oracle", alt: "Oracle" },
+  { imageUrl: "expertice/partners/oracle.svg", name: "Oracle", alt: "Oracle" },
   { imageUrl: "/partners/ibm.svg", name: "IBM", alt: "IBM" },
   { imageUrl: "/partners/invgate.svg", name: "InvGate", alt: "InvGate" },
   { imageUrl: "/partners/lenovo.svg", name: "Lenovo", alt: "Lenovo" },
