@@ -7,10 +7,8 @@ import { messages_chat, partner_logos } from "@/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ChatPreview from "../others/ChatPreview";
-import { useTranslations } from "next-intl";
 
 const Hero = () => {
-  const t = useTranslations("heroPage");
   return (
     <div
       id="hero"
@@ -32,7 +30,7 @@ const Hero = () => {
               className="inline-block mb-6"
             >
               <Badge variant="secondary" className="text-accent-foreground">
-                {t("badge")}
+                JOIN THE FUTURE
               </Badge>
             </motion.div>
             <motion.h1
@@ -47,7 +45,7 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="block"
               >
-                {t("ideas")}
+                Ideas.
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
@@ -55,7 +53,7 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.6 }}
                 className="block"
               >
-                {t("solutions")}
+                Solutions.
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
@@ -63,11 +61,14 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="block"
               >
-                {t("innovations")}
+                Innovations.
               </motion.span>
             </motion.h1>
 
-            <BlurText className="text-background" text={t("subtitle")} />
+            <BlurText
+              className="text-background"
+              text="We build scalable solutions, edge computing, and AI-powered workflows."
+            />
           </motion.div>
 
           <ChatPreview messages={messages_chat} />

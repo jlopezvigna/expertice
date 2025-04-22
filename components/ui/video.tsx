@@ -41,7 +41,7 @@ export function Video({
       className={cn(className)}
       controls={controls}
       playsInline
-      webkit-playsinline
+      webkit-playsinline="true"
     >
       <source src={src} type="video/mp4" />
       {caption && (

@@ -2,14 +2,21 @@ export const messages_chat: {
   content: string;
   isUser: boolean;
 }[] = [
-  { content: "message1", isUser: true },
-  { content: "message2", isUser: false },
-  // { content: "message3", isUser: true },
+  {
+    content: "Hi! How can we help accelerate your digital transformation?",
+    isUser: true,
+  },
+  {
+    content:
+      "We need a high-performance web platform with AI-driven automation.",
+    isUser: false,
+  },
+  // { content: "We build scalable solutions using Next.js, edge computing, and AI-powered workflows.", isUser: true },
 ];
 
 export const company_check: string[] = [
-  "companyCheck.years",
-  "companyCheck.clients",
+  "15 years of experience",
+  "3K+ Clients",
 ];
 
 export const client_logos: {
@@ -22,80 +29,80 @@ export const client_logos: {
     imageUrl: "/clients/aerolineas-argentinas.svg",
     alt: "Aerolineas Argentinas",
     name: "Aerolineas Argentinas",
-    industry: "industry.airlines",
+    industry: "Airlines",
   },
   {
     imageUrl: "/clients/banco-hipotecario.svg",
     alt: "Banco Hipotecario",
     name: "Banco Hipotecario",
-    industry: "industry.banks",
+    industry: "Banks",
   },
 
   {
     imageUrl: "/clients/pronto-pago.svg",
     alt: "Pronto Pago",
     name: "Pronto Pago",
-    industry: "industry.banks",
+    industry: "Banks",
   },
   {
     imageUrl: "/clients/banco-macro.svg",
     alt: "Banco Macro",
     name: "Banco Macro",
-    industry: "industry.banks",
+    industry: "Banks",
   },
   {
     imageUrl: "/clients/farmacity.svg",
     alt: "Farmacity",
     name: "Farmacity",
-    industry: "industry.ecommerce",
+    industry: "Ecommerce",
   },
   {
     imageUrl: "/clients/dhl.svg",
     alt: "DHL",
     name: "DHL",
-    industry: "industry.logistics",
+    industry: "Logistics",
   },
   {
     imageUrl: "/clients/quilmes.svg",
     alt: "Cerveceria Quilmes",
     name: "Cerveceria Quilmes",
-    industry: "industry.beverages",
+    industry: "Beverages",
   },
   {
     imageUrl: "/clients/loma-negra.svg",
     alt: "Loma Negra",
     name: "Loma Negra",
-    industry: "industry.metals",
+    industry: "Metals",
   },
   {
     imageUrl: "/clients/dexter.svg",
     alt: "Dexter",
     name: "Dexter",
-    industry: "industry.ecommerce",
+    industry: "Ecommerce",
   },
   {
     imageUrl: "/clients/byma.svg",
     alt: "BYMA",
     name: "BYMA",
-    industry: "industry.financial",
+    industry: "Financial",
   },
   {
     imageUrl: "/clients/cementos-avellaneda.svg",
     alt: "Cementos Avellaneda",
     name: "Cementos Avellaneda",
-    industry: "industry.metals",
+    industry: "Metals",
   },
   {
     imageUrl: "/clients/allianz.svg",
     alt: "Allianz",
     name: "Allianz",
-    industry: "industry.insurance",
+    industry: "Insurance",
   },
   {
     imageUrl: "/clients/swiss-medical.svg",
     alt: "Swiss Medical",
     name: "Swiss Medical",
-    industry: "industry.healthcare",
+    industry: "Healthcare",
   },
 ];
 

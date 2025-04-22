@@ -1,15 +1,13 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import { AnimatePresence, motion } from "framer-motion";
+import { Quote } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Quote } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { carouselItems } from "./constant";
-import { useTranslations } from "next-intl";
 
 export const CarouselCaseStudies = () => {
-  const t = useTranslations("carouselCaseStudies");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -39,7 +37,7 @@ export const CarouselCaseStudies = () => {
               transition={{ delay: 0.2 }}
               className="text-md font-medium text-foreground mb-6 text-justify"
             >
-              {t(carouselItems[currentIndex].quote)}
+              {carouselItems[currentIndex].quote}
             </motion.blockquote>
             <div className="relative w-[200] mx-auto mt-4 mb-6 aspect-video rounded-3xl overflow-hidden">
               <Image
@@ -52,7 +50,7 @@ export const CarouselCaseStudies = () => {
             </div>
             <div className="flex flex-col items-center gap-2">
               <Badge variant="secondary" className="text-xs">
-                {t(carouselItems[currentIndex].industry)}
+                {carouselItems[currentIndex].industry}
               </Badge>
             </div>
           </div>

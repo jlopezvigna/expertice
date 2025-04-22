@@ -1,9 +1,7 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowRight, LucideIcon } from "lucide-react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { LucideIcon } from "lucide-react";
 import React from "react";
-import { useTranslations } from "next-intl";
 
 interface FeatureCardProps {
   title: string;
@@ -21,7 +19,6 @@ export const FeatureCard = ({
   index,
 }: FeatureCardProps) => {
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
-  const t = useTranslations("features");
 
   return (
     <Link className="flex" href={`${slug}`}>
@@ -33,9 +30,9 @@ export const FeatureCard = ({
         <div className="mb-6 w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
           <Icon className="w-7 h-7 text-primary" />
         </div>
-        <h3 className="text-xl font-bold mb-4 text-foreground">{t(title)}</h3>
+        <h3 className="text-xl font-bold mb-4 text-foreground">{title}</h3>
         <p className="text-muted-foreground md:line-clamp-3 mb-6">
-          {t(description)}
+          {description}
         </p>
 
         <AnimatePresence>
@@ -54,7 +51,7 @@ export const FeatureCard = ({
                 animate={{ y: 0 }}
                 exit={{ y: 10 }}
               >
-                <span className="text-primary">{t("exploreNow")}</span>
+                <span className="text-primary">Explore Now</span>
                 <ArrowRight className="h-4 w-4 inline-block ml-2 text-primary" />
               </motion.div>
             </motion.div>

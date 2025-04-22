@@ -3,12 +3,11 @@
 import { BlurFade } from "@/components/magic/blur-fade";
 import { InteractiveHoverButton } from "@/components/magic/interactive-button";
 import { Badge } from "@/components/ui/badge";
+import Routes from "@/constants/routes";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { BlogCard } from "../others/BlogCard";
-import { useTranslations } from "next-intl";
-import Routes from "@/constants/routes";
 
 interface BlogPost {
   title: string;
@@ -24,7 +23,6 @@ export default function LastBlogs() {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const t = useTranslations("lastBlogs");
 
   useEffect(() => {
     const loadPosts = async () => {
@@ -59,7 +57,7 @@ export default function LastBlogs() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <Badge className="px-3 py-1 mb-4">{t("badge")}</Badge>
+          <Badge className="px-3 py-1 mb-4">From Our Blog</Badge>
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -68,7 +66,7 @@ export default function LastBlogs() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-3xl md:text-4xl font-bold text-foreground mb-4"
           >
-            {t("title")}
+            Latest Articles
           </motion.h2>
         </motion.div>
 
@@ -101,7 +99,7 @@ export default function LastBlogs() {
           className="text-center"
         >
           <InteractiveHoverButton>
-            <Link href={Routes.Blog}>{t("button")}</Link>
+            <Link href={Routes.Blog}>View All</Link>
           </InteractiveHoverButton>
         </motion.div>
       </div>

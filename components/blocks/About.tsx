@@ -4,17 +4,14 @@ import { HeroVideoDialog } from "@/components/magic/hero-video-dialog";
 import { InteractiveHoverButton } from "@/components/magic/interactive-button";
 import { Badge } from "@/components/ui/badge";
 import { company_check } from "@/constants";
-import { Link } from "@/i18n/navigation";
 import { motion, useInView } from "framer-motion";
 import { Check } from "lucide-react";
-import { useTranslations } from "next-intl";
-// import Link from "next/link";
+import Link from "next/link";
 import { useRef } from "react";
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const t = useTranslations("about");
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -46,23 +43,27 @@ const About = () => {
             className="flex-1"
           >
             <motion.div variants={itemVariants} className="inline-block mb-6">
-              <Badge className="px-3 py-1">{t("badge")}</Badge>
+              <Badge className="px-3 py-1">About Us</Badge>
             </motion.div>
             <motion.h2
               variants={itemVariants}
               className="text-3xl md:text-4xl font-bold tracking-tight mb-6"
             >
-              {t("title")}
+              Innovating Through Technology & Expertise
             </motion.h2>
 
             <motion.p
               variants={itemVariants}
               className="text-lg text-muted-foreground mb-8"
             >
-              {t("description")}
+              At Expertice, we connect ideas with technology. As a leading tech
+              consulting firm in Latin America, we specialize in infrastructure,
+              software architecture, and system migrations.
               <br />
               <br />
-              {t("description2")}
+              We provide consulting, development, and support to help businesses
+              streamline operations, enhance productivity, and maximize their
+              tech investments.
             </motion.p>
 
             <motion.div variants={containerVariants} className="space-y-4 mb-8">
@@ -74,14 +75,14 @@ const About = () => {
                 >
                   <Check className="w-5 h-5 text-primary" />
                   <span className="text-md text-muted-foreground">
-                    {t(feature)}
+                    {feature}
                   </span>
                 </motion.div>
               ))}
             </motion.div>
 
             <InteractiveHoverButton>
-              <Link href="/about">{t("learnMore")}</Link>
+              <Link href="/about">Learn More</Link>
             </InteractiveHoverButton>
           </motion.div>
 

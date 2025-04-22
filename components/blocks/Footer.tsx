@@ -4,7 +4,7 @@ import { featureNavigation, mainNavigation } from "@/constants/navigation";
 import Routes from "@/constants/routes";
 import SocialLinks from "@/constants/social";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
-import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import ExperticeSvg from "../expertice-logo";
 
@@ -27,15 +27,11 @@ const socials = [
 ];
 
 const Footer = () => {
-  const t = useTranslations("navigation");
-  const t_footer = useTranslations("footer");
-  const t_features = useTranslations("features");
-
   const support_navigation = [
-    { name: t_footer("navigation.faq"), href: Routes.Faq },
-    { name: t_footer("navigation.termConditions"), href: Routes.Terms },
-    { name: t_footer("navigation.privacyPolicy"), href: Routes.Privacy },
-    { name: t_footer("navigation.pageNotFound"), href: Routes.PageNotFound },
+    { name: "FAQ", href: Routes.Faq },
+    { name: "Term & Conditions", href: Routes.Terms },
+    { name: "Privacy Policy", href: Routes.Privacy },
+    { name: "404", href: Routes.PageNotFound },
   ];
 
   return (
@@ -47,13 +43,16 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-4">
               <ExperticeSvg />
             </div>
-            <p className="text-muted-foreground mb-6">{t_footer("subtitle")}</p>
+            <p className="text-muted-foreground mb-6">
+              We build scalable solutions, edge computing, and AI-powered
+              workflows.
+            </p>
           </div>
 
           {/* Services */}
           <div className="md:col-span-3">
             <h3 className="text-accent-foreground text-md font-semibold mb-4">
-              {t_footer("titles.services")}
+              Services
             </h3>
             <ul className="space-y-3">
               {featureNavigation.map((item) => (
@@ -62,7 +61,7 @@ const Footer = () => {
                     href={item.href}
                     className="text-muted-foreground text-sm hover:text-foreground transition-colors"
                   >
-                    {t_features(item.name)}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -72,7 +71,7 @@ const Footer = () => {
           {/* Company */}
           <div className="md:col-span-2">
             <h3 className="text-accent-foreground text-md font-semibold mb-4">
-              {t_footer("titles.company")}
+              Company
             </h3>
             <ul className="space-y-3">
               <li>
@@ -80,7 +79,7 @@ const Footer = () => {
                   href={Routes.Home}
                   className="text-muted-foreground text-sm hover:text-foreground transition-colors"
                 >
-                  {t("home")}
+                  Home
                 </Link>
               </li>
               {mainNavigation.map((item) => (
@@ -89,7 +88,7 @@ const Footer = () => {
                     href={item.href}
                     className="text-muted-foreground text-sm hover:text-foreground transition-colors"
                   >
-                    {t(item.name)}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -99,7 +98,7 @@ const Footer = () => {
           {/* Support */}
           <div className="md:col-span-2">
             <h3 className="text-accent-foreground text-md font-semibold mb-4">
-              {t_footer("titles.support")}
+              Support
             </h3>
             <ul className="space-y-3">
               {support_navigation.map((item) => (
@@ -119,7 +118,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border">
           <p className="text-muted-foreground mb-4 md:mb-0">
-            {t_footer("copyright")}
+            Copyright Expertice. All right reserved.
           </p>
           <div className="flex items-center gap-4">
             {socials.map((social) => (

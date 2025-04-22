@@ -1,9 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useTranslations } from "next-intl";
-import { useRef, useState, useCallback, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface MessageData {
   content: string;
@@ -154,7 +152,6 @@ const ChatPreview = ({ messages = [] }: ChatPreviewProps) => {
   const isInView = useInView(ref, { once: true });
   const [visibleMessages, setVisibleMessages] = useState<number>(0);
   const [currentMessageComplete, setCurrentMessageComplete] = useState(true);
-  const t = useTranslations("chatPreview");
 
   const showNextMessage = useCallback(() => {
     if (visibleMessages < messages.length && currentMessageComplete) {
@@ -188,7 +185,7 @@ const ChatPreview = ({ messages = [] }: ChatPreviewProps) => {
               <Message
                 key={index}
                 isUser={message.isUser}
-                content={t(message.content)}
+                content={message.content}
                 onAnimationComplete={() => {
                   if (index === visibleMessages - 1) {
                     setCurrentMessageComplete(true);

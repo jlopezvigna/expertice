@@ -22,51 +22,56 @@ interface FeatureNavigationItem extends NavigationItem {
 
 export const featureNavigation: FeatureNavigationItem[] = [
   {
-    name: "techSupport.title",
+    name: "Tech Support",
     href: Routes.TechSupport,
     icon: Headphones,
-    description: "techSupport.description",
+    description:
+      "Support for operating systems, databases, application servers, help desks.",
   },
   {
-    name: "infrastructure.title",
+    name: "Infrastructure",
     href: Routes.InfrastructureServices,
     icon: Server,
-    description: "infrastructure.description",
+    description:
+      "Certified specialists in virtualization, configuration, security, and ongoing maintenance.",
   },
   {
-    name: "softwareArchitecture.title",
+    name: "Software Architecture",
     href: Routes.SoftwareArchitecture,
     icon: Cog,
-    description: "softwareArchitecture.description",
+    description:
+      "Expert consulting, training, development, and support to automate business processes.",
   },
   {
-    name: "redHatSolutions.title",
+    name: "Red Hat Solutions",
     href: Routes.RedHatSolutions,
     icon: Terminal,
-    description: "redHatSolutions.description",
+    description:
+      "Red Hat Enterprise Linux, OpenShift, and other Red Hat products.",
   },
   {
-    name: "itServiceManagement.title",
+    name: "IT Service Management",
     href: Routes.ItServiceManagement,
     icon: LayoutGrid,
-    description: "itServiceManagement.description",
+    description:
+      "IT Service Management, including incident management, problem management, and change management.",
   },
   {
-    name: "tailoredDevelopment.title",
+    name: "Tailored Development",
     href: Routes.TailoredDevelopment,
     icon: Smartphone,
-    description: "tailoredDevelopment.description",
+    description: "Custom software development tailored to your business needs.",
   },
 ];
 
 export const mainNavigation: NavigationItem[] = [
-  { name: "about", href: Routes.About },
+  { name: "About", href: Routes.About },
   {
-    name: "services",
+    name: "Services",
     href: Routes.Services,
     submenu: featureNavigation,
   },
-  { name: "caseStudies", href: Routes.CaseStudies },
-  { name: "blog", href: Routes.Blog },
-  { name: "contact", href: Routes.Contact },
+  { name: "Case Studies", href: Routes.CaseStudies },
+  { name: "Blog", href: Routes.Blog },
+  { name: "Contact", href: Routes.Contact },
 ];

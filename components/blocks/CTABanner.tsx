@@ -3,7 +3,6 @@
 import { InteractiveHoverButton } from "@/components/magic/interactive-button";
 import Routes from "@/constants/routes";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 interface CTABannerProps {
@@ -15,12 +14,10 @@ interface CTABannerProps {
 
 export const CTABanner = ({
   className,
-  title = "title",
-  description = "description",
+  title = "Let&apos;s find more that brings us together.",
+  description = "Connect with us to discover how our expertise in software development can help your business grow. From mobile apps to enterprise solutions, we&apos;re here to bring your vision to life.",
   rounded = true,
 }: CTABannerProps) => {
-  const t = useTranslations("ctaBanner");
-
   return (
     <section className={cn(className, "py-20")}>
       <div
@@ -30,13 +27,13 @@ export const CTABanner = ({
         )}
       >
         <h2 className="text-xl md:text-3xl text-background font-bold mb-6">
-          {t(title)}
+          {title}
         </h2>
         <p className="text-md md:text-xl text-justify text-primary-foreground mb-8 max-w-3xl mx-auto">
-          {t(description)}
+          {description}
         </p>
         <InteractiveHoverButton>
-          <Link href={Routes.Contact}>{t("button")}</Link>
+          <Link href={Routes.Contact}>Contact Us</Link>
         </InteractiveHoverButton>
       </div>
     </section>

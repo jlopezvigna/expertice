@@ -10,13 +10,11 @@ import {
 import { mainNavigation } from "@/constants/navigation";
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import * as React from "react";
 
 export function NavigationMenu({ isHeroSection }: { isHeroSection: boolean }) {
-  const t = useTranslations("navigation");
-
   return (
     <MagicNavigationMenu>
       <NavigationMenuList>
@@ -27,7 +25,7 @@ export function NavigationMenu({ isHeroSection }: { isHeroSection: boolean }) {
                 <NavigationMenuTrigger
                   className={isHeroSection ? "text-white" : "text-foreground"}
                 >
-                  {t(item.name)}
+                  {item.name}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -52,7 +50,7 @@ export function NavigationMenu({ isHeroSection }: { isHeroSection: boolean }) {
                     navigationMenuTriggerStyle()
                   )}
                 >
-                  {t(item.name)}
+                  {item.name}
                 </NavigationMenuLink>
               </Link>
             )}
@@ -70,7 +68,6 @@ const ListItem = React.forwardRef<
     href: string;
   }
 >(({ className, title, href, children, Icon, ...props }, ref) => {
-  const t = useTranslations("features");
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -85,10 +82,10 @@ const ListItem = React.forwardRef<
         >
           <div className="text-sm font-medium leading-none flex items-center gap-2">
             <Icon className="w-4 h-4" />
-            {t(title)}
+            {title}
           </div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {t(children)}
+            {children}
           </p>
         </Link>
       </NavigationMenuLink>

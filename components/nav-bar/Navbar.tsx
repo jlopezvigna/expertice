@@ -15,21 +15,16 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { mainNavigation } from "@/constants/navigation";
-import { Locale } from "@/i18n/config";
 import { cn } from "@/lib/utils";
-import { setUserLocale } from "@/services/locale";
 import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { startTransition, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ExperticeSvg from "../expertice-logo";
 import { NavigationMenu } from "./NavigationMenu";
 
 const Navbar = () => {
-  const locale = useLocale();
-  const t = useTranslations("navigation");
   const [isHeroSection, setIsHeroSection] = useState<boolean>(false);
   const pathname = usePathname();
 
@@ -48,13 +43,6 @@ const Navbar = () => {
     window.addEventListener("scroll", checkHeroSection);
     return () => window.removeEventListener("scroll", checkHeroSection);
   }, [pathname]);
-
-  const onChange = (value: string) => {
-    const locale = value as Locale;
-    startTransition(() => {
-      setUserLocale(locale);
-    });
-  };
 
   return (
     <motion.header
@@ -96,7 +84,7 @@ const Navbar = () => {
           className="hidden md:flex grow-0 items-center gap-4"
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Select onValueChange={onChange} defaultValue={locale}>
+            <Select onValueChange={() => {}} defaultValue={"en"}>
               <SelectTrigger
                 className={isHeroSection ? "text-white" : "text-foreground"}
               >
@@ -151,7 +139,7 @@ const Navbar = () => {
                         href={item.href}
                         className="text-2xl text-accent font-semibold hover:text-foreground transition-colors"
                       >
-                        {t(item.name)}
+                        {item.name}
                       </Link>
                     </SheetClose>
                   </motion.div>

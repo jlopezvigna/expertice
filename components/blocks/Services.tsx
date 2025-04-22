@@ -4,12 +4,9 @@ import { FeatureCard } from "@/components/others/FeatureCard";
 import { Badge } from "@/components/ui/badge";
 import { featureNavigation } from "@/constants/navigation";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
 import { BlurFade } from "../magic/blur-fade";
 
 const Services = () => {
-  const t = useTranslations("features");
-
   return (
     <section id="services" className="py-20 bg-background text-foreground">
       <div className="container mx-auto">
@@ -19,14 +16,14 @@ const Services = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <Badge className="px-3 py-1 mb-4">{t("badge")}</Badge>
+          <Badge className="px-3 py-1 mb-4">Services</Badge>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-3xl md:text-4xl font-bold mb-4"
           >
-            {t("title")}
+            Our diverse suite of finance solutions
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -34,7 +31,9 @@ const Services = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            {t("subtitle")}
+            Discover our wide-ranging financial tools. Experience seamless,
+            user-friendly, and efficient financial management at your
+            fingertips.
           </motion.p>
         </motion.div>
 

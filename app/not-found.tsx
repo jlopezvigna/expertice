@@ -1,9 +1,7 @@
 import Link from "next/link";
 import { InteractiveHoverButton } from "@/components/magic/interactive-button";
-// import { useTranslations } from "next-intl";
 
 export default function NotFound() {
-  // const t = useTranslations("page404");
   return (
     <html lang="en">
       <body>
@@ -18,17 +16,15 @@ export default function NotFound() {
           {/* Contenido principal */}
           <div className="relative z-10 max-w-2xl">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              {/* {t("title")} */}
               Page not found
             </h1>
 
             <p className="text-lg text-muted-foreground mb-12">
-              {/* {t("description")} */}
-              Page not found
+              Try going back to the home page.
             </p>
 
             <InteractiveHoverButton className="bg-foreground text-primary-foreground dark:bg-neutral-200 dark:text-neutral-800">
-              <Link href="/">{/* {t("button")} */} Back to home</Link>
+              <Link href="/">Go to home page</Link>
             </InteractiveHoverButton>
           </div>
         </main>
