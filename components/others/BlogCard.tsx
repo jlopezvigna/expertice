@@ -32,7 +32,7 @@ export const BlogCard = ({
         onHoverEnd={() => setHoveredIndex(null)}
       >
         <Image
-          src={image}
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH}${image}`}
           alt={title}
           width={400}
           height={300}
