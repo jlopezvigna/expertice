@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data } = matter(fileContents);
+    data.articleImage = `${process.env.NEXT_PUBLIC_BASE_PATH}${data.articleImage}`;
 
     return {
       title: data.title,
@@ -89,7 +90,7 @@ export default async function PostDetailsPage({
             {data.articleImage && (
               <div className="relative w-full h-[400px] mb-8 rounded-2xl overflow-hidden">
                 <Image
-                  src={data.articleImage}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}${data.articleImage}`}
                   alt={data.title}
                   fill
                   className="object-cover"
