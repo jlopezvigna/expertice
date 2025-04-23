@@ -14,7 +14,7 @@ import {
 //   HorizontalItem,
 // } from "@/components/others/HorizontalScroll";
 
-import { CTABanner } from "@/components/blocks/CTABanner";
+import { CTABanner } from "@/components/share/CTABanner";
 import { Badge } from "@/components/ui/badge";
 
 // const data = [

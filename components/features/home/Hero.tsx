@@ -2,11 +2,11 @@
 
 import { BlurText } from "@/components/magic/blur-text";
 import { Marquee } from "@/components/magic/marquee";
+import ChatPreview from "@/components/share/ChatPreview";
 import { Badge } from "@/components/ui/badge";
 import { messages_chat, partner_logos } from "@/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ChatPreview from "../others/ChatPreview";
 
 const Hero = () => {
   return (

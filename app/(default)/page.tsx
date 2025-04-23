@@ -1,9 +1,9 @@
-import About from "@/components/blocks/About";
-import CaseStudies from "@/components/blocks/CaseStudies";
-import { CTABanner } from "@/components/blocks/CTABanner";
-import Hero from "@/components/blocks/Hero";
-import LastBlogs from "@/components/blocks/LastBlogs";
-import Services from "@/components/blocks/Services";
+import About from "@/components/features/about/About";
+import CaseStudies from "@/components/features/case-studies/CaseStudies";
+import { CTABanner } from "@/components/share/CTABanner";
+import Hero from "@/components/features/home/Hero";
+import LastBlogs from "@/components/features/blogs/LastBlogs";
+import Services from "@/components/features/services/Services";
 import { VelocityScroll } from "@/components/magic/velocity-scrool";
 
 export default function Home() {

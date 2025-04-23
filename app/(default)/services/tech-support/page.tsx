@@ -1,4 +1,4 @@
-import { BackgroundRoundedBlur } from "@/components/background-rounded-blur";
+import { BackgroundRoundedBlur } from "@/components/share/background-rounded-blur";
 import { Headphones, Server, Shield } from "lucide-react";
 import { ServiceFeature } from "../_components/ServiceFeature";
 import { ServiceHeader } from "../_components/ServiceHeader";

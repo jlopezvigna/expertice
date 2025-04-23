@@ -1,8 +1,8 @@
 "use client";
 
-import StickyScrollSection from "@/components/sticky-scroll-section";
+import StickyScrollSection from "@/components/share/sticky-scroll-section";
 import { ServiceHeader } from "../_components/ServiceHeader";
-import { CTABanner } from "@/components/blocks/CTABanner";
+import { CTABanner } from "@/components/share/CTABanner";
 import { Video } from "@/components/ui/video";
 import { InvgateFeatureCard } from "./_components/invgate-feature-card";
 import { Wrapper } from "./_components/wrapper";

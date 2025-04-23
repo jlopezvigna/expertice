@@ -1,64 +1,32 @@
-import { BackgroundRoundedBlur } from "@/components/background-rounded-blur";
+import { BackgroundRoundedBlur } from "@/components/share/background-rounded-blur";
 import { Title } from "@/components/ui/title";
-import fs from "fs";
 import matter from "gray-matter";
-import path from "path";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Metadata } from "next";
-
+import { getPostSlugs, getFileContents, getPostMetadata } from "@/lib/blog";
+import { PostMetadata } from "@/interfaces/post";
 type Props = {
   params: Promise<{ id: string }>;
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 export async function generateStaticParams() {
-  const postsDirectory = path.join(process.cwd(), "posts");
-  const fileNames = fs.readdirSync(postsDirectory);
-
+  const fileNames = getPostSlugs();
   return fileNames.map((fileName) => ({ id: fileName.replace(".md", "") }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-  const postsDirectory = path.join(process.cwd(), "posts");
-  const fullPath = path.join(postsDirectory, `${id}.md`);
 
   try {
-    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const fileContents = getFileContents(id);
     const { data } = matter(fileContents);
     data.articleImage = `${process.env.NEXT_PUBLIC_BASE_PATH}${data.articleImage}`;
 
-    return {
-      title: data.title,
-      description: data.description || "Artículo del blog de Expertice",
-      authors: [{ name: data.author || "Expertice" }],
-      openGraph: {
-        title: data.title,
-        description: data.description || "Artículo del blog de Expertice",
-        type: "article",
-        publishedTime: data.date,
-        authors: [data.author || "Expertice"],
-        images: data.articleImage
-          ? [
-              {
-                url: data.articleImage,
-                width: 1200,
-                height: 630,
-                alt: data.title,
-              },
-            ]
-          : [],
-      },
-      twitter: {
-        card: "summary_large_image",
-        title: data.title,
-        description: data.description || "Artículo del blog de Expertice",
-        images: data.articleImage ? [data.articleImage] : [],
-      },
-    };
+    return getPostMetadata(data as PostMetadata);
   } catch {
     return {
       title: "Artículo no encontrado",
@@ -73,11 +41,9 @@ export default async function PostDetailsPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const postsDirectory = path.join(process.cwd(), "posts");
-  const fullPath = path.join(postsDirectory, `${id}.md`);
 
   try {
-    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const fileContents = getFileContents(id);
     const { data, content } = matter(fileContents);
 
     return (

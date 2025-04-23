@@ -1,22 +1,25 @@
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
+import { Post, PostMetadata } from "@/interfaces/post";
 
-export type BlogPost = {
-  title: string;
-  description: string;
-  date: string;
-  image: string;
-  href: string;
-};
+const postsDirectory = join(process.cwd(), "posts");
 
-export async function getPosts() {
-  const postsDirectory = join(process.cwd(), "posts");
-  const fileNames = fs.readdirSync(postsDirectory);
+export function getPostSlugs() {
+  return fs.readdirSync(postsDirectory);
+}
+
+export function getFileContents(slug: string) {
+  const fullPath = join(postsDirectory, `${slug}.md`);
+  return fs.readFileSync(fullPath, "utf8");
+}
+
+export async function getPosts(limit?: number): Promise<Post[]> {
+  const fileNames = getPostSlugs();
+  limit = limit || fileNames.length;
 
   const posts = fileNames.map((fileName) => {
-    const fullPath = join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const fileContents = getFileContents(fileName);
     const { data } = matter(fileContents);
 
     return {
@@ -30,5 +33,36 @@ export async function getPosts() {
 
   return posts
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 3);
+    .slice(0, limit);
+}
+
+export function getPostMetadata(data: PostMetadata) {
+  return {
+    title: data.title,
+    description: data.description || "Artículo del blog de Expertice",
+    authors: [{ name: data.author || "Expertice" }],
+    openGraph: {
+      title: data.title,
+      description: data.description || "Artículo del blog de Expertice",
+      type: "article",
+      publishedTime: data.date,
+      authors: [data.author || "Expertice"],
+      images: data.articleImage
+        ? [
+            {
+              url: data.articleImage,
+              width: 1200,
+              height: 630,
+              alt: data.title,
+            },
+          ]
+        : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: data.title,
+      description: data.description || "Artículo del blog de Expertice",
+      images: data.articleImage ? [data.articleImage] : [],
+    },
+  };
 }

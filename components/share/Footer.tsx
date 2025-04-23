@@ -6,7 +6,7 @@ import SocialLinks from "@/constants/social";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 import Link from "next/link";
-import ExperticeSvg from "../expertice-logo";
+import ExperticeSvg from "./expertice-logo";
 
 const socials = [
   {

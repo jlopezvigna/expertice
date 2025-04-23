@@ -1,10 +1,12 @@
-import { BlurFade } from "@/components/magic/blur-fade";
-import { BlogCard } from "@/components/others/BlogCard";
-import { getPostMetadata } from "@/lib/api";
+import { BlogCard } from "./BlogCard";
+import { BlurFade } from "../../magic/blur-fade";
+import { Post } from "@/interfaces/post";
 
-export default async function ListBlogs() {
-  const blogPosts = await getPostMetadata();
+interface ListBlogsProps {
+  blogPosts: Post[];
+}
 
+export default function ListBlogs({ blogPosts }: ListBlogsProps) {
   return (
     <>
       {blogPosts.map((blog, idx) => (

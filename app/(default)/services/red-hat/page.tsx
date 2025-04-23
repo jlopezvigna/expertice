@@ -1,4 +1,4 @@
-import { CTABanner } from "@/components/blocks/CTABanner";
+import { CTABanner } from "@/components/share/CTABanner";
 import { ServiceHeader } from "../_components/ServiceHeader";
 import { Title } from "./_components/title";
 import { redHatSolutions } from "./constant";

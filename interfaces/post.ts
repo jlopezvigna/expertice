@@ -11,4 +11,6 @@ export interface PostMetadata {
   description: string;
   date: string;
   category: string;
+  author: string;
+  articleImage: string;
 }

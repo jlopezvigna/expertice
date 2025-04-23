@@ -21,7 +21,7 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import ExperticeSvg from "../expertice-logo";
+import ExperticeSvg from "@/components/share/expertice-logo";
 import { NavigationMenu } from "./NavigationMenu";
 
 const Navbar = () => {

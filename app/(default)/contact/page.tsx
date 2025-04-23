@@ -1,4 +1,4 @@
-import ContactForm from "@/components/ContactForm";
+import ContactForm from "@/components/features/contact/ContactForm";
 import { Title } from "@/components/ui/title";
 
 export async function generateMetadata() {

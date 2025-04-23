@@ -5,12 +5,13 @@ import { Badge } from "@/components/ui/badge";
 import Routes from "@/constants/routes";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import ListBlogs from "./ListBlogs";
+
 import { useRef } from "react";
-import { BlogPost } from "@/lib/blog";
+import { Post } from "@/interfaces/post";
+import ListBlogs from "./ListBlogs";
 
 interface LastBlogsClientProps {
-  blogPosts: BlogPost[];
+  blogPosts: Post[];
 }
 
 export default function LastBlogsClient({ blogPosts }: LastBlogsClientProps) {

@@ -1,10 +1,10 @@
 "use client";
 
-import { FeatureCard } from "@/components/others/FeatureCard";
+import { FeatureCard } from "@/components/features/services/FeatureCard";
 import { Badge } from "@/components/ui/badge";
 import { featureNavigation } from "@/constants/navigation";
 import { motion } from "framer-motion";
-import { BlurFade } from "../magic/blur-fade";
+import { BlurFade } from "@/components/magic/blur-fade";
 
 const Services = () => {
   return (

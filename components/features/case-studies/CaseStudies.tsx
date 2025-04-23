@@ -1,6 +1,6 @@
 "use client";
 
-import { CarouselCaseStudies } from "@/components/carousel-case-studies";
+import { CarouselCaseStudies } from "@/components/features/case-studies/carousel-case-studies";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 

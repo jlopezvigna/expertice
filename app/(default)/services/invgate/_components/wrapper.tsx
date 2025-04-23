@@ -1,4 +1,4 @@
-import StickyScrollSection from "@/components/sticky-scroll-section";
+import StickyScrollSection from "@/components/share/sticky-scroll-section";
 import { Video } from "@/components/ui/video";
 import { invgate_leader_logos } from "@/constants";
 import { motion } from "framer-motion";

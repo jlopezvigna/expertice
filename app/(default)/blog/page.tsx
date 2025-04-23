@@ -1,32 +1,7 @@
-import { BackgroundRoundedBlur } from "@/components/background-rounded-blur";
-import { BlogCard } from "@/components/others/BlogCard";
+import { BackgroundRoundedBlur } from "@/components/share/background-rounded-blur";
+import { BlogCard } from "@/components/features/blogs/BlogCard";
 import { Title } from "@/components/ui/title";
-import fs from "fs";
-import matter from "gray-matter";
-import path from "path";
-
-async function getPosts() {
-  const postsDirectory = path.join(process.cwd(), "posts");
-  const fileNames = fs.readdirSync(postsDirectory);
-
-  const posts = fileNames.map((fileName) => {
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data } = matter(fileContents);
-
-    return {
-      title: data.title,
-      description: data.description,
-      date: data.date,
-      image: data.articleImage,
-      href: data.url,
-    };
-  });
-
-  return posts.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
-}
+import { getPosts } from "@/lib/blog";
 
 export default async function BlogPage() {
   const blogPosts = await getPosts();

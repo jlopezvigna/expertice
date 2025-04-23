@@ -1,5 +1,5 @@
-import { BackgroundRoundedBlur } from "@/components/background-rounded-blur";
-import { CTABanner } from "@/components/blocks/CTABanner";
+import { BackgroundRoundedBlur } from "@/components/share/background-rounded-blur";
+import { CTABanner } from "@/components/share/CTABanner";
 import { Title } from "@/components/ui/title";
 import type { Metadata } from "next";
 import Clients from "./_components/Clients";
