@@ -9,17 +9,18 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getFileContents(slug: string) {
-  const fullPath = join(postsDirectory, `${slug}.md`);
+export function getFileContents(slug: string, extension: boolean = true) {
+  const fullPath = join(postsDirectory, `${slug}${extension ? ".md" : ""}`);
   return fs.readFileSync(fullPath, "utf8");
 }
 
 export async function getPosts(limit?: number): Promise<Post[]> {
   const fileNames = getPostSlugs();
+  console.log(fileNames);
   limit = limit || fileNames.length;
 
   const posts = fileNames.map((fileName) => {
-    const fileContents = getFileContents(fileName);
+    const fileContents = getFileContents(fileName, false);
     const { data } = matter(fileContents);
 
     return {
