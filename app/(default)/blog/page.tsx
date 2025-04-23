@@ -18,8 +18,6 @@ async function getPosts() {
       title: data.title,
       description: data.description,
       date: data.date,
-      category: "Diseño",
-      readTime: "5 min",
       image: data.articleImage,
       href: data.url,
     };

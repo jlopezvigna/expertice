@@ -1,12 +1,11 @@
 "use client";
 
 // import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
-import { ArrowRight, ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { BlurText } from "@/components/magic/blur-text";
 
 type Testimonial = {
   quote: string;
