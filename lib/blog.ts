@@ -16,7 +16,6 @@ export function getFileContents(slug: string, extension: boolean = true) {
 
 export async function getPosts(limit?: number): Promise<Post[]> {
   const fileNames = getPostSlugs();
-  console.log(fileNames);
   limit = limit || fileNames.length;
 
   const posts = fileNames.map((fileName) => {
