@@ -112,7 +112,7 @@ export const partner_logos: {
   alt: string;
 }[] = [
   {
-    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH}/partners/oracle.svg`,
+    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH}partners/oracle.svg`,
     name: "Oracle",
     alt: "Oracle",
   },
