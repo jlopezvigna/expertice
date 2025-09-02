@@ -10,7 +10,6 @@ export default function SoftwareArchitecturePage() {
       <ServiceHeader
         title="Software Architecture & Automation Solutions"
         description="Expert consulting, training, development, and support to streamline and automate business processes."
-        tag="SOFTWARE ARCHITECTURE"
       />
 
       <ServiceFeature
