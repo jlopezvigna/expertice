@@ -10,12 +10,14 @@ interface CTABannerProps {
   description?: string;
   className?: string;
   rounded?: boolean;
+  buttonText?: string;
 }
 
 export const CTABanner = ({
   className,
   title = "Let&apos;s find more that brings us together.",
   description = "Connect with us to discover how our expertise in software development can help your business grow. From mobile apps to enterprise solutions, we&apos;re here to bring your vision to life.",
+  buttonText = "Contact Us",
   rounded = true,
 }: CTABannerProps) => {
   return (
@@ -33,7 +35,7 @@ export const CTABanner = ({
           {description}
         </p>
         <InteractiveHoverButton>
-          <Link href={Routes.Contact}>Contact Us</Link>
+          <Link href={Routes.Contact}>{buttonText}</Link>
         </InteractiveHoverButton>
       </div>
     </section>

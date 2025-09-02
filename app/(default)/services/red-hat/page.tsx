@@ -1,48 +1,57 @@
+"use client";
+import { useState } from "react";
 import { CTABanner } from "@/components/share/CTABanner";
 import { ServiceHeader } from "../_components/ServiceHeader";
 import { Title } from "./_components/title";
-import { redHatSolutions } from "./constant";
+import { tabsData } from "./mock-data";
+
+function SideTabs({ tabs }) {
+  const [active, setActive] = useState(0);
+  return (
+    <div className="flex w-full mx-auto overflow-hidden ">
+      {/* Tabs a la izquierda */}
+      <div className="flex flex-col px-4 gap-2">
+        {tabs.map((tab, idx) => (
+          <button
+            key={tab.title}
+            className={`flex items-center h-[100px] hover:bg-primary/10 gap-3 px-4 py-3 rounded-xl transition font-semibold text-left text-gray-700 ${
+              active === idx ? "bg-primary/10" : ""
+            }`}
+            onClick={() => setActive(idx)}
+          >
+            <Title title={tab.title} />
+          </button>
+        ))}
+      </div>
+      {/* Contenido a la derecha */}
+      <div className="flex-1 p-8 flex  bg-primary/10 rounded-3xl">
+        {tabs[active].content}
+      </div>
+    </div>
+  );
+}
 
 export default function RedHatPage() {
   return (
-    <main className="bg-primary/10">
+    <main className=" min-h-screen">
       <ServiceHeader
-        title="Red Hat Enterprise Solutions"
-        description="Comprehensive consulting, training, and implementation of Red Hat tools to optimize your business operations."
-        tag="RED HAT SOLUTIONS"
+        title="Transformamos tu negocio con soluciones Red Hat"
+        description="Somos tu partner estratégico para implementar, optimizar y escalar tu infraestructura empresarial con las mejores tecnologías open source del mercado."
       />
-
-      <section className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
-          {redHatSolutions.map((solution, idx) => (
-            <div
-              key={`${solution.name}-${idx}`}
-              className={`relative overflow-hidden h-[400px] bg-muted rounded-3xl p-8 flex flex-col gap-6 ${solution.className}`}
-            >
-              <Title title={solution.name} />
-
-              <h3 className="text-xl font-bold text-foreground text-center pt-8">
-                {solution.description}
-              </h3>
-            </div>
-          ))}
-        </div>
+      <section className="container mx-auto h-full">
+        {/* <SideTabs tabs={tabsData} /> */}
+        <h4>Como podemos ayudarte?</h4>
+        <p>
+          Ofrecemos un ecosistema completo de servicios para que tu empresa
+          escale sin problemas
+        </p>
       </section>
-
       <CTABanner
-        title="Ready to transform your business with Red Hat?"
-        description="Contact us to discuss how Red Hat solutions can help you achieve your business goals."
+        rounded={false}
+        buttonText="Habla con un consultor experto"
+        title="¿Listo para transformar tu infraestructura?"
+        description="Comienza tu transformación digital hoy mismo. Nuestros expertos están listos para ayudarte a implementar las mejores soluciones Red Hat para tu negocio."
       />
-
-      {/* <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-        <VelocityScroll defaultVelocity={0.5} className="text-[#ee0000]">
-          Red Hat Enterprise Linux · Red Hat OpenShift · Kubernetes Solutions ·
-          Red Hat Ansible Automation · Red Hat Cloud · Red Hat Consulting &
-          Support ·
-        </VelocityScroll>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
-      </div> */}
     </main>
   );
 }

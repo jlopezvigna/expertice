@@ -2,9 +2,9 @@ import React from "react";
 
 export function Title({ title }: { title: string }) {
   return (
-    <div className="relative">
+    <div className="">
       <svg
-        className="w-[120px]"
+        className="w-[130px]"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 613 145"
         role="img"
@@ -20,7 +20,7 @@ export function Title({ title }: { title: string }) {
           fill="currentColor"
         />
       </svg>
-      <span className="font-redhat text-lg font-semibold absolute -bottom-6 truncate w-[100%]">
+      <span className="font-redhat text-lg font-semibold truncate">
         {title}
       </span>
     </div>
