@@ -18,7 +18,7 @@ const redHatDisplay = Red_Hat_Display({
 
 type Props = {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export const metadata: Metadata = {
@@ -31,7 +31,8 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params }: Props) {
-  const locale = params.locale as Locale;
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
 
   return (
     <html lang={locale} className="scroll-smooth">
