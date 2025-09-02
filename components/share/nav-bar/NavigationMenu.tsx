@@ -8,13 +8,22 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { mainNavigation } from "@/constants/navigation";
+import { getTranslations, Locale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
 
 import Link from "next/link";
 import * as React from "react";
 
-export function NavigationMenu({ isHeroSection }: { isHeroSection: boolean }) {
+export function NavigationMenu({
+  isHeroSection,
+  translations,
+  locale,
+}: {
+  isHeroSection: boolean;
+  translations: ReturnType<typeof getTranslations>;
+  locale: Locale;
+}) {
   return (
     <MagicNavigationMenu>
       <NavigationMenuList>
@@ -25,32 +34,40 @@ export function NavigationMenu({ isHeroSection }: { isHeroSection: boolean }) {
                 <NavigationMenuTrigger
                   className={isHeroSection ? "text-white" : "text-foreground"}
                 >
-                  {item.name}
+                  {translations.nav[item.name as keyof typeof translations.nav]}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                     {item.submenu.map((subItem) => (
                       <ListItem
                         key={subItem.name}
-                        title={subItem.name}
-                        href={subItem.href}
+                        title={
+                          translations.nav[
+                            subItem.name as keyof typeof translations.nav
+                          ]
+                        }
+                        href={`/${locale}${subItem.href}`}
                         Icon={subItem.icon}
                       >
-                        {subItem.description}
+                        {
+                          translations.nav[
+                            subItem.description as keyof typeof translations.nav
+                          ]
+                        }
                       </ListItem>
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </>
             ) : (
-              <Link href={item.href} legacyBehavior passHref>
+              <Link href={`/${locale}${item.href}`} legacyBehavior passHref>
                 <NavigationMenuLink
                   className={cn(
                     isHeroSection ? "text-white" : "text-foreground",
                     navigationMenuTriggerStyle()
                   )}
                 >
-                  {item.name}
+                  {translations.nav[item.name as keyof typeof translations.nav]}
                 </NavigationMenuLink>
               </Link>
             )}

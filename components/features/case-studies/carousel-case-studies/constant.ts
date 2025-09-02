@@ -18,14 +18,14 @@ export const carouselItems: CarouselItem[] = [
     quote:
       "Trabajamos desde hace 20 años proveyendo servicios informáticos, tecnología y software. Comenzamos brindando servicios profesionales de programación, luego acompañamos a la compañía en la adquisición de suscripciones Red Hat, adicionalmente gracias a conformar el servicio de mesa de ayuda y soporte on site para microinformática durante muchos años, pudimos participar de la transformación digital implementando la suite completa de InvGate, para sus productos Assets Management y Service Management, plataforma donde día a día brindamos consultoría y soporte.",
     author: "Aerolineas Argentinas",
-    industry: "Aerolineas",
+    industry: "Aeronautics",
   },
   {
     image: `${process.env.NEXT_PUBLIC_BASE_PATH}/clients/byma.svg`,
     quote:
       "Proveemos servicios profesionales que conforman el equipo de Seguridad Informática del cliente. Tenemos un esquema flexible que permite incorporar los talentos, generando una continuidad operativa asegurada y promoviendo la inversión en conocimiento de los recursos. Bajo esta operativa, podemos interpretar las diferentes oportunidades de mejora que colaboran con la transformación digital, naciendo de esta manera el caso de éxito de automatización de Red Hat Ansible Platform. Con el objetivo de reducir el tiempo de configuración de los S.O. de los servidores e introducir cambios a nivel de seguridad, parcheo y certificados, BYMA implementó las soluciones de Red Hat Ansible Automation Platform y Red Hat Entreprise Linux. A partir de la automatización se logró disminuir el tiempo de configuración de respuesta de minutos a segundos, así como se redujeron los errores de cambio de password y se aplicó una metodología que permite de forma automatizada verificar estados de cliente y controlar situaciones complejas",
     author: "BYMA - Caja de Valores ",
-    industry: "Banca",
+    industry: "Banking",
   },
   {
     image: `${process.env.NEXT_PUBLIC_BASE_PATH}/clients/dhl.svg`,

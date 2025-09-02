@@ -10,7 +10,6 @@ export default function InfrastructureServicesPage() {
       <ServiceHeader
         title="Infrastructure Services"
         description="Certified specialists in virtualization, installation, configuration, high availability, security, and ongoing maintenance."
-        tag="INFRASTRUCTURE"
       />
 
       <ServiceFeature

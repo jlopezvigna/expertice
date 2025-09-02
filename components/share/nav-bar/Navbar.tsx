@@ -1,13 +1,7 @@
 "use client";
 
+import ExperticeSvg from "@/components/share/expertice-logo";
 import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import {
   Sheet,
   SheetClose,
@@ -15,18 +9,32 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { mainNavigation } from "@/constants/navigation";
+import Routes from "@/constants/routes";
+import { getTranslations, Locale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Menu } from "lucide-react";
+import { Globe, Menu } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import ExperticeSvg from "@/components/share/expertice-logo";
 import { NavigationMenu } from "./NavigationMenu";
 
-const Navbar = () => {
+const Navbar = ({
+  translations,
+  locale,
+}: {
+  translations: ReturnType<typeof getTranslations>;
+  locale: Locale;
+}) => {
   const [isHeroSection, setIsHeroSection] = useState<boolean>(false);
   const pathname = usePathname();
+  const router = useRouter();
+
+  const switchLanguage = () => {
+    const newLocale = locale === "es" ? "en" : "es";
+    const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
+    router.push(newPath);
+  };
 
   const checkHeroSection = () => {
     const heroSection = document.getElementById("hero");
@@ -59,7 +67,10 @@ const Navbar = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex items-center grow-0 gap-2"
         >
-          <Link href="/" className="text-xl font-semibold text-foreground">
+          <Link
+            href={`/${locale}${Routes.Home}`}
+            className="text-xl font-semibold text-foreground"
+          >
             <ExperticeSvg
               className={cn(isHeroSection ? "text-white" : "text-foreground")}
             />
@@ -73,7 +84,11 @@ const Navbar = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="hidden grow md:flex items-center gap-2"
         >
-          <NavigationMenu isHeroSection={isHeroSection} />
+          <NavigationMenu
+            isHeroSection={isHeroSection}
+            translations={translations}
+            locale={locale}
+          />
         </motion.div>
 
         {/* Language Navigation */}
@@ -83,19 +98,15 @@ const Navbar = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="hidden md:flex grow-0 items-center gap-4"
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Select onValueChange={() => {}} defaultValue={"en"}>
-              <SelectTrigger
-                className={isHeroSection ? "text-white" : "text-foreground"}
-              >
-                <SelectValue placeholder="Language" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="es">Español</SelectItem>
-                <SelectItem value="en">English</SelectItem>
-              </SelectContent>
-            </Select>
-          </motion.div>
+          <Button
+            variant="link"
+            size="icon"
+            className="text-foreground"
+            onClick={switchLanguage}
+          >
+            <Globe className="w-4 h-4" />
+            {locale === "es" ? "EN" : "ES"}
+          </Button>
         </motion.div>
 
         {/* Mobile Navigation */}
@@ -136,10 +147,14 @@ const Navbar = () => {
                   >
                     <SheetClose asChild>
                       <Link
-                        href={item.href}
+                        href={`/${locale}${item.href}`}
                         className="text-2xl text-accent font-semibold hover:text-foreground transition-colors"
                       >
-                        {item.name}
+                        {
+                          translations.nav[
+                            item.name as keyof typeof translations.nav
+                          ]
+                        }
                       </Link>
                     </SheetClose>
                   </motion.div>

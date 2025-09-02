@@ -2,7 +2,6 @@
 
 import { Badge } from "@/components/ui/badge";
 import { AnimatePresence, motion } from "framer-motion";
-import { Quote } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { carouselItems } from "./constant";
@@ -13,7 +12,7 @@ export const CarouselCaseStudies = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselItems.length);
-    }, 5000); // Cambia cada 5 segundos
+    }, 15000); // Cambia cada 5 segundos
 
     return () => clearInterval(timer);
   }, []);
@@ -30,24 +29,28 @@ export const CarouselCaseStudies = () => {
           className="flex flex-col items-center"
         >
           <div className="max-w-3xl mx-auto text-center">
-            <Quote className="w-6 h-6 mx-auto my-6 text-primary opacity-50" />
-            <motion.blockquote
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-md font-medium text-foreground mb-6 text-justify"
-            >
-              {carouselItems[currentIndex].quote}
-            </motion.blockquote>
-            <div className="relative w-[200] mx-auto mt-4 mb-6 aspect-video rounded-3xl overflow-hidden">
-              <Image
-                src={carouselItems[currentIndex].image}
-                alt={`Slide ${currentIndex + 1}`}
-                fill
-                className="object-contain"
-                priority
-              />
+            <div className="grid grid-cols-3 gap-4">
+              <div className="relative rounded-3xl bg-white h-[400px]">
+                <Image
+                  src={carouselItems[currentIndex].image}
+                  alt={`Slide ${currentIndex + 1}`}
+                  fill
+                  className="object-contain p-4"
+                  priority
+                />
+              </div>
+              <div className="col-span-2">
+                <motion.blockquote
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-md text-foreground mb-6 text-justify"
+                >
+                  {carouselItems[currentIndex].quote}
+                </motion.blockquote>
+              </div>
             </div>
+
             <div className="flex flex-col items-center gap-2">
               <Badge variant="secondary" className="text-xs">
                 {carouselItems[currentIndex].industry}

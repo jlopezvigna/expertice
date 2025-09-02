@@ -22,7 +22,6 @@ export default function SoftwareDevelopmentPage() {
       <ServiceHeader
         title="Software Development"
         description="Acompañamos a organizaciones en su evolución tecnológica con soluciones adaptadas a sus necesidades. Nos especializamos en desarrollo a medida, integración de sistemas, modernización de infraestructura y mejora continua."
-        tag="WEB · MOBILE · DEVOPS · API"
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">

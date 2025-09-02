@@ -10,7 +10,6 @@ export default function TechSupportPage() {
       <ServiceHeader
         title="Comprehensive Tech Support"
         description="At Expertice, we offer a range of technology infrastructure support solutions designed to ensure high quality, multi-skilled expertise, fast response times, and the best value for your investment."
-        tag="TECH SUPPORT"
       />
 
       <ServiceFeature

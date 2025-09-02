@@ -5,8 +5,13 @@ import { Badge } from "@/components/ui/badge";
 import { featureNavigation } from "@/constants/navigation";
 import { motion } from "framer-motion";
 import { BlurFade } from "@/components/magic/blur-fade";
+import { getTranslations } from "@/lib/i18n";
 
-const Services = () => {
+const Services = ({
+  translations,
+}: {
+  translations: ReturnType<typeof getTranslations>;
+}) => {
   return (
     <section id="services" className="py-20 bg-background text-foreground">
       <div className="container mx-auto">
@@ -43,8 +48,14 @@ const Services = () => {
               <FeatureCard
                 key={item.href}
                 index={idx}
-                title={item.name}
-                description={item.description}
+                title={
+                  translations.nav[item.name as keyof typeof translations.nav]
+                }
+                description={
+                  translations.nav[
+                    item.description as keyof typeof translations.nav
+                  ]
+                }
                 slug={item.href}
                 Icon={item.icon}
               />

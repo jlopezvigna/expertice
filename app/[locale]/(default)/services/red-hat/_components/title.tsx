@@ -1,8 +1,14 @@
 import React from "react";
 
-export function Title({ title }: { title: string }) {
+export function Title({
+  title,
+  className,
+}: {
+  title: string;
+  className?: string;
+}) {
   return (
-    <div className="">
+    <div className={className}>
       <svg
         className="w-[130px]"
         xmlns="http://www.w3.org/2000/svg"

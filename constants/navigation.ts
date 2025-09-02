@@ -20,58 +20,97 @@ interface FeatureNavigationItem extends NavigationItem {
   icon: LucideIcon;
 }
 
+// export const featureNavigation: FeatureNavigationItem[] = [
+//   {
+//     name: "Tech Support",
+//     href: Routes.TechSupport,
+//     icon: Headphones,
+//     description:
+//       "Support for operating systems, databases, application servers, help desks.",
+//   },
+//   {
+//     name: "Infrastructure",
+//     href: Routes.InfrastructureServices,
+//     icon: Server,
+//     description:
+//       "Certified specialists in virtualization, configuration, security, and ongoing maintenance.",
+//   },
+//   {
+//     name: "Software Architecture",
+//     href: Routes.SoftwareArchitecture,
+//     icon: Cog,
+//     description:
+//       "Expert consulting, training, development, and support to automate business processes.",
+//   },
+//   {
+//     name: "Red Hat Solutions",
+//     href: Routes.RedHatSolutions,
+//     icon: Terminal,
+//     description:
+//       "Red Hat Enterprise Linux, OpenShift, and other Red Hat products.",
+//   },
+//   {
+//     name: "IT Service Management",
+//     href: Routes.ItServiceManagement,
+//     icon: LayoutGrid,
+//     description:
+//       "IT Service Management, including incident management, problem management, and change management.",
+//   },
+//   {
+//     name: "Tailored Development",
+//     href: Routes.TailoredDevelopment,
+//     icon: Smartphone,
+//     description: "Custom software development tailored to your business needs.",
+//   },
+// ];
+
 export const featureNavigation: FeatureNavigationItem[] = [
   {
-    name: "Tech Support",
+    name: "techSupport",
     href: Routes.TechSupport,
     icon: Headphones,
-    description:
-      "Support for operating systems, databases, application servers, help desks.",
+    description: "techSupportDescription",
   },
   {
-    name: "Infrastructure",
+    name: "infrastructure",
     href: Routes.InfrastructureServices,
     icon: Server,
-    description:
-      "Certified specialists in virtualization, configuration, security, and ongoing maintenance.",
+    description: "infrastructureDescription",
   },
   {
-    name: "Software Architecture",
+    name: "softwareArchitecture",
     href: Routes.SoftwareArchitecture,
     icon: Cog,
-    description:
-      "Expert consulting, training, development, and support to automate business processes.",
+    description: "softwareArchitectureDescription",
   },
   {
-    name: "Red Hat Solutions",
+    name: "redHatSolutions",
     href: Routes.RedHatSolutions,
     icon: Terminal,
-    description:
-      "Red Hat Enterprise Linux, OpenShift, and other Red Hat products.",
+    description: "redHatSolutionsDescription",
   },
   {
-    name: "IT Service Management",
+    name: "itServiceManagement",
     href: Routes.ItServiceManagement,
     icon: LayoutGrid,
-    description:
-      "IT Service Management, including incident management, problem management, and change management.",
+    description: "itServiceManagementDescription",
   },
   {
-    name: "Tailored Development",
+    name: "tailoredDevelopment",
     href: Routes.TailoredDevelopment,
     icon: Smartphone,
-    description: "Custom software development tailored to your business needs.",
+    description: "tailoredDevelopmentDescription",
   },
 ];
 
 export const mainNavigation: NavigationItem[] = [
-  { name: "About", href: Routes.About },
+  { name: "about", href: Routes.About },
   {
-    name: "Services",
+    name: "services",
     href: Routes.Services,
     submenu: featureNavigation,
   },
-  { name: "Case Studies", href: Routes.CaseStudies },
-  { name: "Blog", href: Routes.Blog },
-  { name: "Contact", href: Routes.Contact },
+  { name: "caseStudies", href: Routes.CaseStudies },
+  { name: "blog", href: Routes.Blog },
+  { name: "contact", href: Routes.Contact },
 ];

@@ -7,6 +7,7 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 import Link from "next/link";
 import ExperticeSvg from "./expertice-logo";
+import type { getTranslations, Locale } from "@/lib/i18n";
 
 const socials = [
   {
@@ -26,12 +27,18 @@ const socials = [
   },
 ];
 
-const Footer = () => {
+const Footer = ({
+  translations,
+  locale,
+}: {
+  translations: ReturnType<typeof getTranslations>;
+  locale: Locale;
+}) => {
   const support_navigation = [
-    { name: "FAQ", href: Routes.Faq },
-    { name: "Term & Conditions", href: Routes.Terms },
-    { name: "Privacy Policy", href: Routes.Privacy },
-    { name: "404", href: Routes.PageNotFound },
+    { name: "faq", href: Routes.Faq },
+    { name: "termConditions", href: Routes.Terms },
+    { name: "privacyPolicy", href: Routes.Privacy },
+    { name: "pageNotFound", href: Routes.PageNotFound },
   ];
 
   return (
@@ -44,8 +51,7 @@ const Footer = () => {
               <ExperticeSvg />
             </div>
             <p className="text-muted-foreground mb-6">
-              We build scalable solutions, edge computing, and AI-powered
-              workflows.
+              {translations.footer.description}
             </p>
           </div>
 
@@ -58,10 +64,14 @@ const Footer = () => {
               {featureNavigation.map((item) => (
                 <li key={item.name}>
                   <Link
-                    href={item.href}
+                    href={`/${locale}${item.href}`}
                     className="text-muted-foreground text-sm hover:text-foreground transition-colors"
                   >
-                    {item.name}
+                    {
+                      translations.nav[
+                        item.name as keyof typeof translations.nav
+                      ]
+                    }
                   </Link>
                 </li>
               ))}
@@ -76,7 +86,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href={Routes.Home}
+                  href={`/${locale}${Routes.Home}`}
                   className="text-muted-foreground text-sm hover:text-foreground transition-colors"
                 >
                   Home
@@ -85,10 +95,14 @@ const Footer = () => {
               {mainNavigation.map((item) => (
                 <li key={item.name}>
                   <Link
-                    href={item.href}
+                    href={`/${locale}${item.href}`}
                     className="text-muted-foreground text-sm hover:text-foreground transition-colors"
                   >
-                    {item.name}
+                    {
+                      translations.nav[
+                        item.name as keyof typeof translations.nav
+                      ]
+                    }
                   </Link>
                 </li>
               ))}
@@ -104,10 +118,14 @@ const Footer = () => {
               {support_navigation.map((item) => (
                 <li key={item.name}>
                   <Link
-                    href={item.href}
+                    href={`/${locale}${item.href}`}
                     className="text-muted-foreground text-sm hover:text-foreground transition-colors"
                   >
-                    {item.name}
+                    {
+                      translations.nav[
+                        item.name as keyof typeof translations.nav
+                      ]
+                    }
                   </Link>
                 </li>
               ))}
@@ -118,7 +136,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border">
           <p className="text-muted-foreground mb-4 md:mb-0">
-            Copyright Expertice. All right reserved.
+            {translations.footer.copyright}
           </p>
           <div className="flex items-center gap-4">
             {socials.map((social) => (

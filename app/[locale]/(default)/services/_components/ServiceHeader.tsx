@@ -6,9 +6,14 @@ import { motion } from "framer-motion";
 interface ServiceHeaderProps {
   title: string;
   description: string;
+  topSlot?: React.ReactNode;
 }
 
-export const ServiceHeader = ({ title, description }: ServiceHeaderProps) => {
+export const ServiceHeader = ({
+  title,
+  description,
+  topSlot,
+}: ServiceHeaderProps) => {
   return (
     <div className="text-foreground py-24">
       <div className="container mx-auto">
@@ -18,6 +23,7 @@ export const ServiceHeader = ({ title, description }: ServiceHeaderProps) => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto text-center space-y-6"
         >
+          {topSlot}
           <Title
             text={title}
             className="text-4xl md:text-5xl font-bold text-foreground"

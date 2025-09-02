@@ -1,3 +1,4 @@
+import { Locale, locales } from "@/lib/i18n";
 import type { Metadata } from "next";
 import { Inter, Poppins, Red_Hat_Display } from "next/font/google";
 import { ReactNode } from "react";
@@ -17,6 +18,7 @@ const redHatDisplay = Red_Hat_Display({
 
 type Props = {
   children: ReactNode;
+  params: { locale: string };
 };
 
 export const metadata: Metadata = {
@@ -24,10 +26,15 @@ export const metadata: Metadata = {
   description:
     "Discover the Future of Finance: Seamless Transactions, Innovative Solutions, and a User-Friendly Interface.",
 };
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
-export default async function RootLayout({ children }: Props) {
+export default async function RootLayout({ children, params }: Props) {
+  const locale = params.locale as Locale;
+
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang={locale} className="scroll-smooth">
       <body
         className={`${inter.variable} ${poppins.variable} ${redHatDisplay.variable} antialiased`}
       >
