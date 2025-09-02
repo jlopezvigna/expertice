@@ -4,15 +4,16 @@ import { getTranslations, locales, type Locale } from "@/lib/i18n";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default function Layout({ children, params }: LocaleLayoutProps) {
-  const locale = params.locale as Locale;
+export default async function Layout({ children, params }: LocaleLayoutProps) {
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
   const translations = getTranslations(locale);
   return (
     <>

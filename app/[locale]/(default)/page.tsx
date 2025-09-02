@@ -11,8 +11,13 @@ export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default function Home({ params }: { params: { locale: string } }) {
-  const locale = params.locale as Locale;
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
   const translations = getTranslations(locale);
   return (
     <main className="min-h-screen">
