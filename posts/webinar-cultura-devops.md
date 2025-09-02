@@ -2,7 +2,7 @@
 title: "Webinar - Cultura DevOps"
 description: "Descubre cómo implementar una cultura DevOps efectiva en tu organización"
 date: "2021-03-04"
-articleImage: "/blog/webinar-cultura-devops.png"
+articleImage: "blog/webinar-cultura-devops.png"
 url: "/blog/webinar-cultura-devops"
 ---
 

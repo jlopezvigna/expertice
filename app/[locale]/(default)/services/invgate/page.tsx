@@ -129,7 +129,7 @@ export default function InvgatePage() {
         <div className="grid grid-cols-2 gap-[6rem] py-8">
           <Video
             className="rounded-2xl"
-            src="/invgate/service-management.mp4"
+            src="invgate/service-management.mp4"
             width={600}
             height={600}
           />
@@ -177,7 +177,7 @@ export default function InvgatePage() {
           </div>
           <Video
             className="rounded-2xl"
-            src="/invgate/insight_hardware.webm"
+            src="invgate/insight_hardware.webm"
             width={600}
             height={600}
           />
@@ -186,7 +186,7 @@ export default function InvgatePage() {
         <div className="grid grid-cols-2 gap-[6rem] py-8">
           <Image
             className="rounded-2xl"
-            src="/invgate/inventory-asset-management.png"
+            src="invgate/inventory-asset-management.png"
             width={400}
             height={400}
             alt="Inventory asset management"
@@ -355,7 +355,7 @@ export default function InvgatePage() {
         <div className="grid grid-cols-2 gap-[6rem] py-8">
           <Video
             className="rounded-2xl"
-            src="/invgate/service-management.mp4"
+            src="invgate/service-management.mp4"
             width={600}
             height={600}
           />
@@ -403,7 +403,7 @@ export default function InvgatePage() {
           </div>
           <Video
             className="rounded-2xl"
-            src="/invgate/insight_hardware.webm"
+            src="invgate/insight_hardware.webm"
             width={600}
             height={600}
           />
@@ -412,7 +412,7 @@ export default function InvgatePage() {
         <div className="grid grid-cols-2 gap-[6rem] py-8">
           <Image
             className="rounded-2xl"
-            src="/invgate/inventory-asset-management.png"
+            src="invgate/inventory-asset-management.png"
             width={400}
             height={400}
             alt="Inventory asset management"

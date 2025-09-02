@@ -2,7 +2,7 @@
 title: "Cómo lograr eficiencia operativa en la industria financiera"
 description: "Descubre cómo la tecnología open source ayuda a optimizar los procesos y servicios digitales en el sector financiero"
 date: "2020-01-22"
-articleImage: "/blog/eficiencia-operativa-industria-financiera.jpg"
+articleImage: "blog/eficiencia-operativa-industria-financiera.jpg"
 url: "/blog/eficiencia-operativa-industria-financiera"
 ---
 

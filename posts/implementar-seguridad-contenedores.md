@@ -2,7 +2,7 @@
 title: "¿Cómo implementar seguridad en los contenedores?"
 description: "Descubre los pasos clave para implementar una seguridad efectiva en los contenedores y proteger tus aplicaciones"
 date: "2019-12-18"
-articleImage: "/blog/implementar-seguridad-contenedores.jpg"
+articleImage: "blog/implementar-seguridad-contenedores.jpg"
 url: "/blog/implementar-seguridad-contenedores"
 ---
 

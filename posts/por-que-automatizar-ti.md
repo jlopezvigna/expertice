@@ -2,7 +2,7 @@
 title: "¿Por qué es importante automatizar la TI?"
 description: "Descubre cómo la automatización puede ayudar a optimizar los procesos de TI y mejorar la eficiencia empresarial"
 date: "2019-11-20"
-articleImage: "/blog/por-que-automatizar-ti.jpg"
+articleImage: "blog/por-que-automatizar-ti.jpg"
 url: "/blog/por-que-automatizar-ti"
 ---
 

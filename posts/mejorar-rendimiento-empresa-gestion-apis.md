@@ -2,7 +2,7 @@
 title: "¿Cómo mejorar el rendimiento de su empresa optimizando la gestión de las APIs?"
 description: "Descubre cómo una gestión efectiva de APIs puede ayudar a mejorar la integración y el rendimiento de tu empresa"
 date: "2019-11-11"
-articleImage: "/blog/mejorar-rendimiento-empresa-gestion-apis.jpg"
+articleImage: "blog/mejorar-rendimiento-empresa-gestion-apis.jpg"
 url: "/blog/mejorar-rendimiento-empresa-gestion-apis"
 ---
 

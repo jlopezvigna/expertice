@@ -2,7 +2,7 @@
 title: "La cultura de la integración y las empresas ágiles"
 description: "Descubre cómo la integración ágil ayuda a las empresas a ser más eficientes y adaptarse rápidamente a los cambios del mercado"
 date: "2020-01-07"
-articleImage: "/blog/cultura-integracion-empresas-agiles.jpg"
+articleImage: "blog/cultura-integracion-empresas-agiles.jpg"
 url: "/blog/cultura-integracion-empresas-agiles"
 ---
 

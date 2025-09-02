@@ -2,7 +2,7 @@
 title: "Expertice: nuestra trayectoria en el camino al éxito"
 description: "Expertice es una compañía con una amplia trayectoria preparada, justamente, para funcionar como apoyo en la transformación digital. ¿Quieres conocer más?"
 date: "2022-04-27"
-articleImage: "/blog/expertice-trayectoria-exito.jpg"
+articleImage: "blog/expertice-trayectoria-exito.jpg"
 url: "/blog/expertice-trayectoria-exito"
 ---
 

@@ -2,7 +2,7 @@
 title: "La integración ágil como puente para la innovación"
 description: "Descubre cómo la integración ágil ayuda a las empresas a innovar velozmente y transformar sus entornos de TI"
 date: "2020-04-28"
-articleImage: "/blog/integracion-agil-puente-innovacion.jpg"
+articleImage: "blog/integracion-agil-puente-innovacion.jpg"
 url: "/blog/integracion-agil-puente-innovacion"
 ---
 

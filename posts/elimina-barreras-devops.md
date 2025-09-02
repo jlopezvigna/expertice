@@ -2,7 +2,7 @@
 title: "Elimina las barreras entre los equipos de IT con DevOps"
 description: "DevOps representa una filosofía basada en la automatización y la colaboración con el principal objetivo de ofrecer un alto valor empresarial."
 date: "2022-05-22"
-articleImage: "/blog/elimina-barreras-devops.jpg"
+articleImage: "blog/elimina-barreras-devops.jpg"
 url: "/blog/elimina-barreras-devops"
 ---
 

@@ -2,7 +2,7 @@
 title: "Nos certificamos para seguir brindándote la mejor calidad de servicio"
 description: "Expertice obtiene la certificación ISO 9001:2015 para garantizar la calidad de sus servicios"
 date: "2019-11-11"
-articleImage: "/blog/certificacion-iso-9001.jpg"
+articleImage: "blog/certificacion-iso-9001.jpg"
 url: "/blog/certificacion-iso-9001"
 ---
 

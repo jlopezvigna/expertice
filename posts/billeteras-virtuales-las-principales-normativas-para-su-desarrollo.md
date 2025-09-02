@@ -2,7 +2,7 @@
 title: "Billeteras virtuales: las principales normativas para su desarrollo"
 description: "En esta oportunidad te contaremos sobre las normativas vigentes en la región y cómo operamos en Expertice para garantizar un desarrollo apropiado."
 date: "2022-07-07"
-articleImage: "/blog/billeteras-virtuales-las-principales-normativas-para-su-desarrollo.jpg"
+articleImage: "blog/billeteras-virtuales-las-principales-normativas-para-su-desarrollo.jpg"
 url: "/blog/billeteras-virtuales-las-principales-normativas-para-su-desarrollo"
 ---
 

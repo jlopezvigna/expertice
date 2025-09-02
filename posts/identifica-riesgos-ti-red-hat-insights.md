@@ -2,7 +2,7 @@
 title: "Identifica los riesgos de TI con Red Hat Insights"
 description: "Descubre cómo identificar y prevenir amenazas a la seguridad, rendimiento y disponibilidad de forma proactiva"
 date: "2020-05-12"
-articleImage: "/blog/identifica-riesgos-ti-red-hat-insights.jpg"
+articleImage: "blog/identifica-riesgos-ti-red-hat-insights.jpg"
 url: "/blog/identifica-riesgos-ti-red-hat-insights"
 ---
 

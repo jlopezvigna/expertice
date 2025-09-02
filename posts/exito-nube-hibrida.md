@@ -2,7 +2,7 @@
 title: "¿Cómo conseguir el éxito con la nube híbrida?"
 description: "Descubre las estrategias clave para implementar exitosamente una infraestructura de nube híbrida"
 date: "2020-02-10"
-articleImage: "/blog/exito-nube-hibrida.jpg"
+articleImage: "blog/exito-nube-hibrida.jpg"
 url: "/blog/exito-nube-hibrida"
 ---
 

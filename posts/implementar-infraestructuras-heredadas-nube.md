@@ -2,7 +2,7 @@
 title: "Cómo implementar infraestructuras heredadas en la nube"
 description: "Descubre cómo trasladar aplicaciones heredadas a la nube usando contenedores y plataformas híbridas"
 date: "2020-04-16"
-articleImage: "/blog/implementar-infraestructuras-heredadas-nube.jpg"
+articleImage: "blog/implementar-infraestructuras-heredadas-nube.jpg"
 url: "/blog/implementar-infraestructuras-heredadas-nube"
 ---
 

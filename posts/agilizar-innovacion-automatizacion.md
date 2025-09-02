@@ -2,7 +2,7 @@
 title: "Tres maneras de agilizar la innovación con automatización"
 description: "Descubre cómo la automatización ayuda a las empresas a acelerar la innovación y mejorar la eficiencia"
 date: "2020-02-22"
-articleImage: "/blog/agilizar-innovacion-automatizacion.jpg"
+articleImage: "blog/agilizar-innovacion-automatizacion.jpg"
 url: "/blog/agilizar-innovacion-automatizacion"
 ---
 

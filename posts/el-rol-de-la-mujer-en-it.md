@@ -2,7 +2,7 @@
 title: "El rol de la mujer en IT"
 description: "La inserción laboral femenina en IT es un proceso bastante lento. En Argentina, el 25% de las mujeres estudia ingeniería y el 15% programación. Conoce la opinión de Miriam Vigna, CEO de Expertice, al respecto"
 date: "2022-07-28"
-articleImage: "/blog/el-rol-de-la-mujer-en-it.jpg"
+articleImage: "blog/el-rol-de-la-mujer-en-it.jpg"
 url: "/blog/el-rol-de-la-mujer-en-it"
 ---
 

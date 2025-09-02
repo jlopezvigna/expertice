@@ -2,7 +2,7 @@
 title: "Optimizar la TI para agilizar el negocio"
 description: "Descubre cómo la optimización de TI puede ayudar a reducir costos, aumentar la eficiencia y acelerar el negocio"
 date: "2019-12-20"
-articleImage: "/blog/optimizar-ti-agilizar-negocio.jpg"
+articleImage: "blog/optimizar-ti-agilizar-negocio.jpg"
 url: "/blog/optimizar-ti-agilizar-negocio"
 ---
 

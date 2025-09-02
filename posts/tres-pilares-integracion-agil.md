@@ -2,7 +2,7 @@
 title: "Los tres pilares de la integración ágil"
 description: "Descubre las tres tecnologías principales que sustentan la integración ágil: integración distribuida, APIs y contenedores"
 date: "2020-03-25"
-articleImage: "/blog/tres-pilares-integracion-agil.jpg"
+articleImage: "blog/tres-pilares-integracion-agil.jpg"
 url: "/blog/tres-pilares-integracion-agil"
 ---
 

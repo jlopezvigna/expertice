@@ -2,7 +2,7 @@
 title: "El secreto de la billetera virtual, integrar aplicaciones"
 description: "Descubre cómo la integración de APIs es fundamental para el funcionamiento de las billeteras virtuales"
 date: "2020-07-08"
-articleImage: "/blog/billetera-virtual-integrar-aplicaciones.jpg"
+articleImage: "blog/billetera-virtual-integrar-aplicaciones.jpg"
 url: "/blog/billetera-virtual-integrar-aplicaciones"
 ---
 

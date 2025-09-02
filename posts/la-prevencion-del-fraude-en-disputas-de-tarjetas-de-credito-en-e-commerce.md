@@ -2,7 +2,7 @@
 title: "La prevención del fraude en disputas de tarjetas de crédito en e-commerce"
 description: "Muchas de las renuncias en tarjetas de crédito son causadas por fraude. Lee el blog para conocer qué hacer después de una proude y cómo prevenirlo"
 date: "2022-09-06"
-articleImage: "/blog/la-prevención-del-fraude-en-disputas-de-tarjetas-de-crédito-en-e-commerce.jpg"
+articleImage: "blog/la-prevención-del-fraude-en-disputas-de-tarjetas-de-crédito-en-e-commerce.jpg"
 url: "/blog/la-prevencion-del-fraude-en-disputas-de-tarjetas-de-credito-en-e-commerce"
 ---
 

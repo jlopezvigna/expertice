@@ -18,7 +18,7 @@ const Photos = ({ className = "" }: { className?: string }) => {
     >
       <div className="relative w-[45%] aspect-[2/3] rounded-2xl overflow-hidden mb-8">
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH}vision-image.jpg`}
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH}about/vision-image.jpg`}
           alt="Nuestra Visión"
           fill
           className="object-cover"
@@ -27,7 +27,7 @@ const Photos = ({ className = "" }: { className?: string }) => {
       </div>
       <div className="relative w-[45%] aspect-[2/3] rounded-2xl overflow-hidden mt-8">
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH}vision-image-2.jpg`}
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH}about/vision-image-2.jpg`}
           alt="Nuestra Visión"
           fill
           className="object-cover"

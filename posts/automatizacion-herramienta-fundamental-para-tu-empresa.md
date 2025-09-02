@@ -2,7 +2,7 @@
 title: "Automatización, herramienta fundamental para tu empresa"
 description: "Automatizar las tareas de una organización consiste en usar la tecnología para realizar determinadas operaciones sin necesidad de la asistencia humana."
 date: "2022-06-07"
-articleImage: "/blog/automatizacion-herramienta-fundamental-para-tu-empresa.jpg"
+articleImage: "blog/automatizacion-herramienta-fundamental-para-tu-empresa.jpg"
 url: "/blog/automatizacion-herramienta-fundamental-para-tu-empresa"
 ---
 

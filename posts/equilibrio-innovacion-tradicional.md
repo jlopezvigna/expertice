@@ -2,7 +2,7 @@
 title: "Cómo lograr el equilibrio entre la innovación y lo tradicional"
 description: "Descubre cómo encontrar el balance entre innovación y sistemas tradicionales en la transformación digital"
 date: "2019-11-06"
-articleImage: "/blog/equilibrio-innovacion-tradicional.jpg"
+articleImage: "blog/equilibrio-innovacion-tradicional.jpg"
 url: "/blog/equilibrio-innovacion-tradicional"
 ---
 

@@ -2,7 +2,7 @@
 title: "Billeteras virtuales: la clave para el comercio B2B"
 description: "El uso de las billeteras virtuales ha crecido exponencialmente entre los consumidores. Permiten realizar múltiples transacciones desde el celular."
 date: "2022-04-13"
-articleImage: "/blog/billeteras-virtuales-comercio-b2b.jpg"
+articleImage: "blog/billeteras-virtuales-comercio-b2b.jpg"
 url: "/blog/billeteras-virtuales-comercio-b2b"
 ---
 

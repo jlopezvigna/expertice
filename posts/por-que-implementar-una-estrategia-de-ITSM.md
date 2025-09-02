@@ -2,7 +2,7 @@
 title: "¿Por qué implementar una estrategia de ITSM?"
 description: "La gestión de servicios empresariales en tecnología se ha convertido en un factor muy importante que aporta valor diferencial tanto a las organizaciones que lo implementan como a sus consumidores directos"
 date: "2022-07-01"
-articleImage: "/blog/por-que-implementar-una-estrategia-de-ITSM.jpg"
+articleImage: "blog/por-que-implementar-una-estrategia-de-ITSM.jpg"
 url: "/blog/por-que-implementar-una-estrategia-de-ITSM"
 ---
 

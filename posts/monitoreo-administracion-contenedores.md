@@ -2,7 +2,7 @@
 title: "Monitoreo y administración de contenedores"
 description: "Descubre cómo gestionar y monitorear contenedores de manera eficiente y segura"
 date: "2020-05-27"
-articleImage: "/blog/monitoreo-administracion-contenedores.jpg"
+articleImage: "blog/monitoreo-administracion-contenedores.jpg"
 url: "/blog/monitoreo-administracion-contenedores"
 ---
 

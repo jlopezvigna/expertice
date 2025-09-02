@@ -2,7 +2,7 @@
 title: "Automatización de TI: Un desafío posible"
 description: "Automatizar las tareas de una organización consiste en usar la tecnología para realizar determinadas operaciones sin necesidad de la asistencia humana."
 date: "2025-01-27"
-articleImage: "/blog/automatizacion-it.png"
+articleImage: "blog/automatizacion-it.png"
 url: "/blog/automatizacion-en-it"
 ---
 

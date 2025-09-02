@@ -2,7 +2,7 @@
 title: "¿Es posible desarrollar y escalar aplicaciones en un entorno híbrido?"
 description: "Descubre cómo las plataformas de aplicaciones en contenedores pueden ayudar a las organizaciones a desarrollar e implementar aplicaciones en entornos híbridos"
 date: "2019-11-25"
-articleImage: "/blog/desarrollar-escalar-aplicaciones-entorno-hibrido.jpg"
+articleImage: "blog/desarrollar-escalar-aplicaciones-entorno-hibrido.jpg"
 url: "/blog/desarrollar-escalar-aplicaciones-entorno-hibrido"
 ---
 
