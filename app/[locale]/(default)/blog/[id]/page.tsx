@@ -56,7 +56,7 @@ export default async function PostDetailsPage({
             {data.articleImage && (
               <div className="relative w-full h-[400px] mb-8 rounded-2xl overflow-hidden">
                 <Image
-                  src={`${data.articleImage}`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_URL}${data.articleImage}`}
                   alt={data.title}
                   fill
                   className="object-cover"
