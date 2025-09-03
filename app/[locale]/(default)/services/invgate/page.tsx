@@ -7,6 +7,9 @@ import { ServiceHeader } from "../_components/ServiceHeader";
 import { Video } from "@/components/ui/video";
 import Image from "next/image";
 
+import assetsManagementImage3 from "@/public/invgate/inventory-asset-management.png";
+import assetsManagementImage5 from "@/invgate/inventory-asset-management.png";
+
 const assetsManagementFeatures = [
   "Build a CMDB and a normalized software catalog",
   "Monitor software usage and assigned licenses",
@@ -186,7 +189,8 @@ export default function InvgatePage() {
         <div className="grid grid-cols-2 gap-[6rem] py-8">
           <Image
             className="rounded-2xl"
-            src="invgate/inventory-asset-management.png"
+            src={assetsManagementImage3}
+            // "invgate/inventory-asset-management.png"
             width={400}
             height={400}
             alt="Inventory asset management"
@@ -412,7 +416,7 @@ export default function InvgatePage() {
         <div className="grid grid-cols-2 gap-[6rem] py-8">
           <Image
             className="rounded-2xl"
-            src="invgate/inventory-asset-management.png"
+            src={assetsManagementImage5}
             width={400}
             height={400}
             alt="Inventory asset management"
