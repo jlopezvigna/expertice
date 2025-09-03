@@ -2,8 +2,19 @@ import { BackgroundRoundedBlur } from "@/components/share/background-rounded-blu
 import { BlogCard } from "@/components/features/blogs/BlogCard";
 import { Title } from "@/components/ui/title";
 import { getPosts } from "@/lib/blog";
+import { Locale, locales } from "@/lib/i18n";
 
-export default async function BlogPage() {
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
   const blogPosts = await getPosts();
 
   return (
@@ -19,8 +30,8 @@ export default async function BlogPage() {
               <div key={idx}>
                 <BlogCard
                   index={idx}
-                  href={blog.href}
-                  image={blog.image}
+                  href={`/${locale}${blog.href}`}
+                  image={`${process.env.NEXT_PUBLIC_BASE_PATH}${blog.image}`}
                   title={blog.title}
                   date={blog.date}
                   description={blog.description}

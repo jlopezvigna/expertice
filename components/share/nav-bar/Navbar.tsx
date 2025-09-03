@@ -101,7 +101,10 @@ const Navbar = ({
           <Button
             variant="link"
             size="icon"
-            className="text-foreground"
+            className={cn(
+              isHeroSection ? "text-white" : "text-foreground",
+              "h-6 w-6"
+            )}
             onClick={switchLanguage}
           >
             <Globe className="w-4 h-4" />
