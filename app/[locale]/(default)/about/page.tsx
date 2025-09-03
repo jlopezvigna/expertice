@@ -1,11 +1,6 @@
-import { BackgroundRoundedBlur } from "@/components/share/background-rounded-blur";
-import { CTABanner } from "@/components/share/CTABanner";
-import { Title } from "@/components/ui/title";
+import { Locale, locales } from "@/lib/i18n";
 import type { Metadata } from "next";
-import Clients from "./_components/Clients";
-import Culture from "./_components/Culture";
-import Stats from "./_components/Stats";
-import { statsData } from "./_components/constant";
+import AboutPageClient from "./about";
 
 export const metadata: Metadata = {
   title: "Sobre Nosotros | Expertice - IT Solutions",
@@ -14,23 +9,16 @@ export const metadata: Metadata = {
   keywords: "sobre nosotros, historia, misión, visión, equipo IT, Expertice",
 };
 
-export default function AboutPage() {
-  return (
-    <main className="overflow-hidden relative pt-16 bg-primary/10">
-      <BackgroundRoundedBlur left={false} />
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
-      {/* Content */}
-      <div className="relative container mx-auto py-12">
-        <Title text="About Us" />
-
-        <Culture />
-
-        <Stats data={statsData} gridCols="4" />
-
-        <Clients />
-
-        <CTABanner />
-      </div>
-    </main>
-  );
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: localeParam } = await params;
+  const locale = localeParam as Locale;
+  return <AboutPageClient locale={locale} />;
 }
