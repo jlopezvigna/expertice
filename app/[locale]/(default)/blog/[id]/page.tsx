@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const fileContents = getFileContents(id);
     const { data } = matter(fileContents);
-    data.articleImage = `${process.env.NEXT_PUBLIC_BASE_PATH}${data.articleImage}`;
+    data.articleImage = data.articleImage;
 
     return getPostMetadata(data as PostMetadata);
   } catch {
@@ -56,7 +56,7 @@ export default async function PostDetailsPage({
             {data.articleImage && (
               <div className="relative w-full h-[400px] mb-8 rounded-2xl overflow-hidden">
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_BASE_URL}${data.articleImage}`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}${data.articleImage}`}
                   alt={data.title}
                   fill
                   className="object-cover"
