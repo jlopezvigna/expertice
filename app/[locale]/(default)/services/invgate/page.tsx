@@ -8,7 +8,7 @@ import { Video } from "@/components/ui/video";
 import Image from "next/image";
 
 import assetsManagementImage3 from "@/public/invgate/inventory-asset-management.png";
-import assetsManagementImage5 from "@/invgate/inventory-asset-management.png";
+import assetsManagementImage5 from "@/public/invgate/inventory-asset-management.png";
 
 const assetsManagementFeatures = [
   "Build a CMDB and a normalized software catalog",
