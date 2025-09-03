@@ -31,7 +31,7 @@ export default async function BlogPage({
                 <BlogCard
                   index={idx}
                   href={`/${locale}${blog.href}`}
-                  image={`${process.env.NEXT_PUBLIC_BASE_PATH}${blog.image}`}
+                  image={`${blog.image}`}
                   title={blog.title}
                   date={blog.date}
                   description={blog.description}
