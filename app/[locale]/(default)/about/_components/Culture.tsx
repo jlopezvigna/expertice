@@ -4,6 +4,8 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Eye, Target } from "lucide-react";
 import Image from "next/image";
+import visionImage from "@/public/about/vision-image.jpg";
+import visionImage2 from "@/public/about/vision-image-2.jpg";
 
 const Photos = ({ className = "" }: { className?: string }) => {
   return (
@@ -18,7 +20,7 @@ const Photos = ({ className = "" }: { className?: string }) => {
     >
       <div className="relative w-[45%] aspect-[2/3] rounded-2xl overflow-hidden mb-8">
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH}about/vision-image.jpg`}
+          src={visionImage}
           alt="Nuestra Visión"
           fill
           className="object-cover"
@@ -27,7 +29,7 @@ const Photos = ({ className = "" }: { className?: string }) => {
       </div>
       <div className="relative w-[45%] aspect-[2/3] rounded-2xl overflow-hidden mt-8">
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH}about/vision-image-2.jpg`}
+          src={visionImage2}
           alt="Nuestra Visión"
           fill
           className="object-cover"

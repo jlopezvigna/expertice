@@ -137,7 +137,6 @@ export default function InvgatePage() {
             height={600}
           />
           <div>
-            {/* <Badge className="text-xs font-medium">IT inventory mapping</Badge> */}
             <h3 className="text-2xl font-bold">
               Understand your IT assets and how they relate to each other
             </h3>
@@ -159,7 +158,6 @@ export default function InvgatePage() {
         </div>
         <div className="grid grid-cols-2 gap-[6rem] py-8">
           <div>
-            {/* <Badge className="text-xs font-medium">IT inventory mapping</Badge> */}
             <h3 className="text-2xl font-bold">
               Track hardware and IoT assets across your organization
             </h3>
@@ -181,6 +179,7 @@ export default function InvgatePage() {
           <Video
             className="rounded-2xl"
             src="invgate/insight_hardware.webm"
+            type="video/webm"
             width={600}
             height={600}
           />
@@ -190,7 +189,6 @@ export default function InvgatePage() {
           <Image
             className="rounded-2xl"
             src={assetsManagementImage3}
-            // "invgate/inventory-asset-management.png"
             width={400}
             height={400}
             alt="Inventory asset management"
@@ -408,6 +406,7 @@ export default function InvgatePage() {
           <Video
             className="rounded-2xl"
             src="invgate/insight_hardware.webm"
+            type="video/webm"
             width={600}
             height={600}
           />

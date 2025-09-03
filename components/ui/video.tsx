@@ -16,6 +16,7 @@ interface VideoProps {
     lang: string;
     label: string;
   };
+  type?: string;
 }
 
 export function Video({
@@ -29,6 +30,7 @@ export function Video({
   preload = "auto",
   controls = false,
   className,
+  type = "video/mp4",
 }: VideoProps) {
   return (
     <video
@@ -43,7 +45,7 @@ export function Video({
       playsInline
       webkit-playsinline="true"
     >
-      <source src={src} type="video/mp4" />
+      <source src={src} type={type} />
       {caption && (
         <track
           src={caption.src}
