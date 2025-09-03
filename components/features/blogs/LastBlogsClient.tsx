@@ -9,12 +9,19 @@ import Link from "next/link";
 import { useRef } from "react";
 import { Post } from "@/interfaces/post";
 import ListBlogs from "./ListBlogs";
+import { getTranslations, Locale } from "@/lib/i18n";
 
 interface LastBlogsClientProps {
   blogPosts: Post[];
+  translations: ReturnType<typeof getTranslations>;
+  locale: Locale;
 }
 
-export default function LastBlogsClient({ blogPosts }: LastBlogsClientProps) {
+export default function LastBlogsClient({
+  blogPosts,
+  translations,
+  locale,
+}: LastBlogsClientProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -58,7 +65,11 @@ export default function LastBlogsClient({ blogPosts }: LastBlogsClientProps) {
           animate={isInView ? "visible" : "hidden"}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12"
         >
-          <ListBlogs blogPosts={blogPosts} />
+          <ListBlogs
+            blogPosts={blogPosts}
+            translations={translations}
+            locale={locale}
+          />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,7 +79,7 @@ export default function LastBlogsClient({ blogPosts }: LastBlogsClientProps) {
           className="text-center"
         >
           <InteractiveHoverButton>
-            <Link href={Routes.Blog}>View All</Link>
+            <Link href={`/${locale}/${Routes.Blog}`}>View All</Link>
           </InteractiveHoverButton>
         </motion.div>
       </div>

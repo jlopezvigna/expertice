@@ -51,20 +51,12 @@ export const translations = {
       },
     },
     about: {
-      title: "Acerca de Nosotros",
-      subtitle: "Conoce más sobre nuestro proyecto",
+      badge: "Acerca de Nosotros",
+      title: "Innovando a través de Tecnología y Expertise",
       description:
-        "Somos un equipo dedicado a crear experiencias web excepcionales. Este proyecto demuestra cómo implementar internacionalización en Next.js con exportación estática.",
-      mission: {
-        title: "Nuestra Misión",
-        text: "Crear soluciones web accesibles y eficientes que funcionen para usuarios de todo el mundo, sin importar su idioma o ubicación.",
-      },
-      tech: {
-        title: "Tecnologías Utilizadas",
-        nextjs: "Next.js para el framework",
-        tailwind: "Tailwind CSS para estilos",
-        typescript: "TypeScript para tipado",
-      },
+        "At Expertice, we connect ideas with technology. As a leading tech consulting firm in Latin America, we specialize in infrastructure, software architecture, and system migrations.",
+      description2:
+        "We provide consulting, development, and support to help businesses streamline operations, enhance productivity, and maximize their tech investments.",
     },
     common: {
       changeLanguage: "Cambiar idioma",
@@ -118,20 +110,12 @@ export const translations = {
       },
     },
     about: {
-      title: "About Us",
-      subtitle: "Learn more about our project",
+      badge: "Acerca de Nosotros",
+      title: "Innovando a través de Tecnología y Expertise",
       description:
-        "We are a team dedicated to creating exceptional web experiences. This project demonstrates how to implement internationalization in Next.js with static export.",
-      mission: {
-        title: "Our Mission",
-        text: "Create accessible and efficient web solutions that work for users worldwide, regardless of their language or location.",
-      },
-      tech: {
-        title: "Technologies Used",
-        nextjs: "Next.js for the framework",
-        tailwind: "Tailwind CSS for styling",
-        typescript: "TypeScript for typing",
-      },
+        "At Expertice, we connect ideas with technology. As a leading tech consulting firm in Latin America, we specialize in infrastructure, software architecture, and system migrations.",
+      description2:
+        "We provide consulting, development, and support to help businesses streamline operations, enhance productivity, and maximize their tech investments.",
     },
     common: {
       changeLanguage: "Change language",

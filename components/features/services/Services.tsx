@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge";
 import { featureNavigation } from "@/constants/navigation";
 import { motion } from "framer-motion";
 import { BlurFade } from "@/components/magic/blur-fade";
-import { getTranslations } from "@/lib/i18n";
+import { getTranslations, Locale } from "@/lib/i18n";
 
 const Services = ({
   translations,
+  locale,
 }: {
   translations: ReturnType<typeof getTranslations>;
+  locale: Locale;
 }) => {
   return (
     <section id="services" className="py-20 bg-background text-foreground">
@@ -46,6 +48,7 @@ const Services = ({
           {featureNavigation.map((item, idx) => (
             <BlurFade key={idx} delay={0.25 + idx * 0.1} inView>
               <FeatureCard
+                locale={locale}
                 key={item.href}
                 index={idx}
                 title={

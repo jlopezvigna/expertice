@@ -22,8 +22,8 @@ export default async function Home({
   return (
     <main className="min-h-screen">
       <Hero />
-      <About />
-      <Services translations={translations} />
+      <About translations={translations} locale={locale} />
+      <Services translations={translations} locale={locale} />
       <CaseStudies />
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden py-20 bg-gradient-to-r from-primary to-accent-foreground">
         <VelocityScroll defaultVelocity={0.5} className="text-background">
@@ -33,8 +33,8 @@ export default async function Home({
         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-primary" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-accent-foreground" />
       </div>
-      <LastBlogs />
-      <CTABanner rounded={false} />
+      <LastBlogs translations={translations} locale={locale} />
+      <CTABanner rounded={false} locale={locale} />
     </main>
   );
 }

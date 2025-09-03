@@ -4,12 +4,19 @@ import { HeroVideoDialog } from "@/components/magic/hero-video-dialog";
 import { InteractiveHoverButton } from "@/components/magic/interactive-button";
 import { Badge } from "@/components/ui/badge";
 import { company_check } from "@/constants";
+import { getTranslations, Locale } from "@/lib/i18n";
 import { motion, useInView } from "framer-motion";
 import { Check } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 
-const About = () => {
+const About = ({
+  translations,
+  locale,
+}: {
+  translations: ReturnType<typeof getTranslations>;
+  locale: Locale;
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -43,27 +50,23 @@ const About = () => {
             className="flex-1"
           >
             <motion.div variants={itemVariants} className="inline-block mb-6">
-              <Badge className="px-3 py-1">About Us</Badge>
+              <Badge className="px-3 py-1">{translations.about.badge}</Badge>
             </motion.div>
             <motion.h2
               variants={itemVariants}
               className="text-3xl md:text-4xl font-bold tracking-tight mb-6"
             >
-              Innovating Through Technology & Expertise
+              {translations.about.title}
             </motion.h2>
 
             <motion.p
               variants={itemVariants}
               className="text-lg text-muted-foreground mb-8"
             >
-              At Expertice, we connect ideas with technology. As a leading tech
-              consulting firm in Latin America, we specialize in infrastructure,
-              software architecture, and system migrations.
+              {translations.about.description}
               <br />
               <br />
-              We provide consulting, development, and support to help businesses
-              streamline operations, enhance productivity, and maximize their
-              tech investments.
+              {translations.about.description2}
             </motion.p>
 
             <motion.div variants={containerVariants} className="space-y-4 mb-8">
@@ -82,7 +85,7 @@ const About = () => {
             </motion.div>
 
             <InteractiveHoverButton>
-              <Link href="/about">Learn More</Link>
+              <Link href={`/${locale}/about`}>Learn More</Link>
             </InteractiveHoverButton>
           </motion.div>
 
@@ -98,7 +101,7 @@ const About = () => {
             >
               <HeroVideoDialog
                 videoSrc="https://www.youtube.com/embed/1ayW0GrThyI"
-                thumbnailSrc={`${process.env.NEXT_PUBLIC_BASE_PATH}about/video-preview.png`}
+                thumbnailSrc={`about/video-preview.png`}
               />
             </motion.div>
           </div>

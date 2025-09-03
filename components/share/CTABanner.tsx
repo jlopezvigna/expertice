@@ -2,6 +2,7 @@
 
 import { InteractiveHoverButton } from "@/components/magic/interactive-button";
 import Routes from "@/constants/routes";
+import { Locale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
@@ -11,6 +12,7 @@ interface CTABannerProps {
   className?: string;
   rounded?: boolean;
   buttonText?: string;
+  locale: Locale;
 }
 
 export const CTABanner = ({
@@ -19,6 +21,7 @@ export const CTABanner = ({
   description = "Connect with us to discover how our expertise in software development can help your business grow. From mobile apps to enterprise solutions, we&apos;re here to bring your vision to life.",
   buttonText = "Contact Us",
   rounded = true,
+  locale,
 }: CTABannerProps) => {
   return (
     <section className={cn(className, "py-20")}>
@@ -35,7 +38,7 @@ export const CTABanner = ({
           {description}
         </p>
         <InteractiveHoverButton>
-          <Link href={Routes.Contact}>{buttonText}</Link>
+          <Link href={`/${locale}/${Routes.Contact}`}>{buttonText}</Link>
         </InteractiveHoverButton>
       </div>
     </section>

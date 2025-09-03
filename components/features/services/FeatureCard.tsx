@@ -1,3 +1,4 @@
+import { Locale } from "@/lib/i18n";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, LucideIcon } from "lucide-react";
 import Link from "next/link";
@@ -9,9 +10,11 @@ interface FeatureCardProps {
   slug: string;
   Icon: LucideIcon;
   index: number;
+  locale: Locale;
 }
 
 export const FeatureCard = ({
+  locale,
   title,
   description,
   slug,
@@ -21,7 +24,7 @@ export const FeatureCard = ({
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
 
   return (
-    <Link className="flex" href={`${slug}`}>
+    <Link className="flex" href={`/${locale}/${slug}`}>
       <motion.div
         className="relative grow overflow-hidden max-h-[300px] min-w-[200px] bg-card rounded-3xl p-8 md:h-[270px]"
         onHoverStart={() => setHoveredIndex(index)}
