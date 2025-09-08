@@ -51,8 +51,9 @@ export function RedHatPageClient({ locale }: { locale: Locale }) {
         title="Transformamos tu negocio con soluciones Red Hat"
         description="Somos tu partner estratégico para implementar, optimizar y escalar tu infraestructura empresarial con las mejores tecnologías open source del mercado."
         topSlot={
-          <div className="container mx-auto flex items-center justify-center gap-4">
-            <Title title="" /> -
+          <div className="container flex flex-col md:flex-row items-center justify-center gap-4">
+            <Title title="" />
+            <span className="hidden md:block">-</span>
             <Badge variant="default" className="text-sm font-medium">
               <Award className="w-4 h-4 mr-2" />
               Partner Oficial Red Hat

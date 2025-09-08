@@ -30,16 +30,16 @@ export const CarouselCaseStudies = () => {
         >
           <div className="max-w-3xl mx-auto text-center">
             <div className="grid grid-cols-3 gap-4">
-              <div className="relative rounded-3xl bg-white h-[400px]">
+              <div className="col-span-3 md:col-span-1 h-[200px] md:h-[400px] relative rounded-3xl bg-white">
                 <Image
                   src={carouselItems[currentIndex].image}
                   alt={`Slide ${currentIndex + 1}`}
                   fill
-                  className="object-contain p-4"
+                  className="object-contain p-8 md:p-4"
                   priority
                 />
               </div>
-              <div className="col-span-2">
+              <div className="col-span-3 md:col-span-2">
                 <motion.blockquote
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}

@@ -42,7 +42,7 @@ export function InvgatePageClient({ locale }: { locale: Locale }) {
         title="IT Service & Asset Management"
         description="Optimize IT service delivery with InvGate's help desk and asset management solutions for seamless operations."
         topSlot={
-          <div className="container mx-auto flex items-center justify-center gap-4">
+          <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-4">
             <div>
               <svg
                 aria-label="IT Management Software"
@@ -57,7 +57,7 @@ export function InvgatePageClient({ locale }: { locale: Locale }) {
                 <path d="M149.15.84c-4.98-.55-9.99-.83-15-.84C60.04.02-.02 60.11 0 134.22c.02 64.94 46.54 120.55 110.46 132.03v-58.36C69.4 195.24 46.36 151.7 59 110.64c10.04-32.62 40.17-54.88 74.3-54.9 2.06 0 4.13.1 6.17.27-14.65-6.1-21.58-22.91-15.48-37.56a28.748 28.748 0 0 1 25-17.65l.15.04Zm102.2 75.95c0 12.34-10.01 22.35-22.35 22.35s-22.35-10.01-22.35-22.35c0-12.33 9.99-22.34 22.33-22.35 12.34-.01 22.36 9.99 22.37 22.33v.02Zm15.68 47.69c0 9.46-7.67 17.13-17.13 17.13s-17.13-7.67-17.13-17.13 7.67-17.13 17.13-17.13 17.13 7.67 17.13 17.13Zm-4.41 41.07c0 6.71-5.44 12.14-12.14 12.14-6.71 0-12.14-5.44-12.14-12.14 0-6.71 5.44-12.14 12.14-12.14h.02c6.7.01 12.13 5.44 12.13 12.14Zm-13.82 32.97c-.01 4.43-3.61 8.01-8.03 7.99-4.43-.01-8.01-3.61-8-8.03.01-4.42 3.6-8 8.01-8 4.43.01 8.01 3.6 8.01 8.03Zm-15.02 20.83c0 3.15-2.56 5.71-5.71 5.71s-5.71-2.56-5.71-5.71 2.56-5.71 5.71-5.71 5.71 2.56 5.71 5.71Zm-17.34 17a3.576 3.576 0 0 1-3.56 3.6 3.576 3.576 0 0 1-3.6-3.56 3.576 3.576 0 0 1 3.56-3.6h.02c1.97 0 3.57 1.59 3.58 3.56Zm-15.06 11.31c0 1.34-1.08 2.42-2.42 2.42-1.34 0-2.42-1.08-2.42-2.42 0-1.33 1.07-2.41 2.4-2.42a2.416 2.416 0 0 1 2.44 2.4v.02Zm-17.51 9.19c.01.66-.52 1.21-1.18 1.22-.66.01-1.21-.52-1.22-1.18-.01-.66.52-1.21 1.18-1.22h.04c.65.01 1.17.53 1.18 1.18Z"></path>
               </svg>
             </div>
-            -
+            <span className="hidden md:block">-</span>
             <Badge className="text-sm font-medium">
               <Award className="w-4 h-4 mr-2" />
               Gold Partner Oficial InvGate
@@ -130,14 +130,14 @@ export function InvgatePageClient({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-[6rem] py-8">
+        <div className="grid grid-cols-2 gap-[2rem] md:gap-[6rem] py-8">
           <Video
-            className="rounded-2xl"
-            src="invgate/service-management.mp4"
+            className="col-span-2 md:col-span-1 rounded-2xl"
+            src="/invgate/service-management.mp4"
             width={600}
             height={600}
           />
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h3 className="text-2xl font-bold">
               Understand your IT assets and how they relate to each other
             </h3>
@@ -157,8 +157,8 @@ export function InvgatePageClient({ locale }: { locale: Locale }) {
             </ul>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-[6rem] py-8">
-          <div>
+        <div className="grid grid-cols-2 gap-[2rem] md:gap-[6rem] py-8">
+          <div className="col-span-2 md:col-span-1">
             <h3 className="text-2xl font-bold">
               Track hardware and IoT assets across your organization
             </h3>
@@ -178,24 +178,23 @@ export function InvgatePageClient({ locale }: { locale: Locale }) {
             </ul>
           </div>
           <Video
-            className="rounded-2xl"
-            src="invgate/insight_hardware.webm"
+            className="col-span-2 md:col-span-1 rounded-2xl"
+            src="/invgate/insight_hardware.webm"
             type="video/webm"
             width={600}
             height={600}
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-[6rem] py-8">
+        <div className="grid grid-cols-2 gap-[2rem] md:gap-[6rem] py-8">
           <Image
-            className="rounded-2xl"
+            className="col-span-2 md:col-span-1 rounded-2xl"
             src={assetsManagementImage3}
             width={400}
             height={400}
             alt="Inventory asset management"
           />
-          <div>
-            {/* <Badge className="text-xs font-medium">IT inventory mapping</Badge> */}
+          <div className="col-span-2 md:col-span-1">
             <h3 className="text-2xl font-bold">
               Improve Governance and Operations
             </h3>
@@ -355,14 +354,14 @@ export function InvgatePageClient({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-[6rem] py-8">
+        <div className="grid grid-cols-2 gap-[2rem] md:gap-[6rem] py-8">
           <Video
-            className="rounded-2xl"
+            className="col-span-2 md:col-span-1 rounded-2xl"
             src="invgate/service-management.mp4"
             width={600}
             height={600}
           />
-          <div>
+          <div className="col-span-2 md:col-span-1">
             {/* <Badge className="text-xs font-medium">IT inventory mapping</Badge> */}
             <h3 className="text-2xl font-bold">
               Understand your IT assets and how they relate to each other
@@ -383,8 +382,8 @@ export function InvgatePageClient({ locale }: { locale: Locale }) {
             </ul>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-[6rem] py-8">
-          <div>
+        <div className="grid grid-cols-2 gap-[2rem] md:gap-[6rem] py-8">
+          <div className="col-span-2 md:col-span-1">
             {/* <Badge className="text-xs font-medium">IT inventory mapping</Badge> */}
             <h3 className="text-2xl font-bold">
               Track hardware and IoT assets across your organization
@@ -405,7 +404,7 @@ export function InvgatePageClient({ locale }: { locale: Locale }) {
             </ul>
           </div>
           <Video
-            className="rounded-2xl"
+            className="col-span-2 md:col-span-1 rounded-2xl"
             src="invgate/insight_hardware.webm"
             type="video/webm"
             width={600}
@@ -413,15 +412,15 @@ export function InvgatePageClient({ locale }: { locale: Locale }) {
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-[6rem] py-8">
+        <div className="grid grid-cols-2 gap-[2rem] md:gap-[6rem] py-8">
           <Image
-            className="rounded-2xl"
+            className="col-span-2 md:col-span-1 rounded-2xl"
             src={assetsManagementImage5}
             width={400}
             height={400}
             alt="Inventory asset management"
           />
-          <div>
+          <div className="col-span-2 md:col-span-1 order-1 md:order-2">
             {/* <Badge className="text-xs font-medium">IT inventory mapping</Badge> */}
             <h3 className="text-2xl font-bold">
               Improve Governance and Operations

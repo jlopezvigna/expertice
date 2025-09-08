@@ -9,7 +9,7 @@ import Link from "next/link";
 import ExperticeSvg from "./expertice-logo";
 import type { getTranslations, Locale } from "@/lib/i18n";
 
-const socials = [
+export const socials = [
   {
     name: "LinkedIn",
     href: SocialLinks.LinkedIn,
