@@ -5,6 +5,13 @@ export type Locale = (typeof locales)[number];
 
 export const translations = {
   es: {
+    blog: {
+      badge: "Nuestro blog",
+      title: "Últimos artículos & noticias",
+      subtitle:
+        "Mantente al día con las últimas características, actualizaciones de productos y tendencias de la industria.",
+      button: "Ver todos los artículos",
+    },
     nav: {
       home: "Inicio",
       about: "Nosotros",
@@ -57,6 +64,17 @@ export const translations = {
         "At Expertice, we connect ideas with technology. As a leading tech consulting firm in Latin America, we specialize in infrastructure, software architecture, and system migrations.",
       description2:
         "We provide consulting, development, and support to help businesses streamline operations, enhance productivity, and maximize their tech investments.",
+      checklist: {
+        years: "15 años de experiencia",
+        clients: "3K+ Clientes",
+      },
+    },
+    services: {
+      title: "Our diverse suite of finance solutions",
+      description:
+        "Discover our wide-ranging financial tools. Experience seamless, user-friendly, and efficient financial management at your fingertips.",
+      badge: "Servicios",
+      exploreNow: "Explorar Ahora",
     },
     common: {
       changeLanguage: "Cambiar idioma",
@@ -68,6 +86,13 @@ export const translations = {
     },
   },
   en: {
+    blog: {
+      title: "Latest updates & news",
+      subtitle:
+        "Stay uo to date with the latest deatures, product updates, and industry trends.",
+      badge: "From our blog",
+      button: "View all articles",
+    },
     nav: {
       home: "Home",
       about: "About Us",
@@ -93,6 +118,10 @@ export const translations = {
         "IT Service Management, including incident management, problem management, and change management.",
       tailoredDevelopmentDescription:
         "Custom software development tailored to your business needs.",
+      faq: "FAQ",
+      termConditions: "Term & Conditions",
+      privacyPolicy: "Privacy Policy",
+      pageNotFound: "404",
     },
     home: {
       title: "Welcome to Our Site",
@@ -116,6 +145,17 @@ export const translations = {
         "At Expertice, we connect ideas with technology. As a leading tech consulting firm in Latin America, we specialize in infrastructure, software architecture, and system migrations.",
       description2:
         "We provide consulting, development, and support to help businesses streamline operations, enhance productivity, and maximize their tech investments.",
+      checklist: {
+        years: "15 años de experiencia",
+        clients: "3K+ Clientes",
+      },
+    },
+    services: {
+      title: "Our diverse suite of finance solutions",
+      description:
+        "Discover our wide-ranging financial tools. Experience seamless, user-friendly, and efficient financial management at your fingertips.",
+      badge: "Servicios",
+      exploreNow: "Explorar Ahora",
     },
     common: {
       changeLanguage: "Change language",

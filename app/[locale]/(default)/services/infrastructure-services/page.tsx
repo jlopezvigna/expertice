@@ -1,12 +1,10 @@
-import { BackgroundRoundedBlur } from "@/components/share/background-rounded-blur";
+import { Cloud, Server, Shield } from "lucide-react";
 import { ServiceFeature } from "../_components/ServiceFeature";
 import { ServiceHeader } from "../_components/ServiceHeader";
-import { Server, Shield, Cloud } from "lucide-react";
 
 export default function InfrastructureServicesPage() {
   return (
     <main className="relative bg-primary/10">
-      <BackgroundRoundedBlur />
       <ServiceHeader
         title="Infrastructure Services"
         description="Certified specialists in virtualization, installation, configuration, high availability, security, and ongoing maintenance."

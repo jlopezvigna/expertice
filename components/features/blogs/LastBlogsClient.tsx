@@ -45,7 +45,7 @@ export default function LastBlogsClient({
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <Badge className="px-3 py-1 mb-4">From Our Blog</Badge>
+          <Badge className="px-3 py-1 mb-4">{translations.blog.badge}</Badge>
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -54,8 +54,17 @@ export default function LastBlogsClient({
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-3xl md:text-4xl font-bold text-foreground mb-4"
           >
-            Latest Articles
+            {translations.blog.title}
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-md text-muted-foreground max-w-2xl mx-auto"
+          >
+            {translations.blog.subtitle}
+          </motion.p>
         </motion.div>
 
         <motion.div
@@ -79,7 +88,9 @@ export default function LastBlogsClient({
           className="text-center"
         >
           <InteractiveHoverButton>
-            <Link href={`/${locale}/${Routes.Blog}`}>View All</Link>
+            <Link href={`/${locale}/${Routes.Blog}`}>
+              {translations.blog.button}
+            </Link>
           </InteractiveHoverButton>
         </motion.div>
       </div>

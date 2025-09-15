@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface BlogCardProps {
   href: string;
@@ -12,6 +13,7 @@ interface BlogCardProps {
   date?: string;
   description?: string;
   index: number;
+  className?: string;
 }
 
 export const BlogCard = ({
@@ -21,11 +23,12 @@ export const BlogCard = ({
   date = "",
   description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
   index,
+  className,
 }: BlogCardProps) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <Link className="flex" href={`${href}`}>
+    <Link className={cn("flex", className)} href={`${href}`}>
       <motion.div
         className="relative grow overflow-hidden max-h-[600px] min-w-[150px] bg-card rounded-3xl p-8"
         onHoverStart={() => setHoveredIndex(index)}

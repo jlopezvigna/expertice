@@ -14,11 +14,6 @@ export const messages_chat: {
   // { content: "We build scalable solutions using Next.js, edge computing, and AI-powered workflows.", isUser: true },
 ];
 
-export const company_check: string[] = [
-  "15 years of experience",
-  "3K+ Clients",
-];
-
 import aerolineasArgentinas from "@/public/clients/aerolineas-argentinas.svg";
 import bancoHipotecario from "@/public/clients/banco-hipotecario.svg";
 import prontoPago from "@/public/clients/pronto-pago.svg";

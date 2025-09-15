@@ -1,12 +1,10 @@
-import { BackgroundRoundedBlur } from "@/components/share/background-rounded-blur";
+import { Code, Workflow } from "lucide-react";
 import { ServiceFeature } from "../_components/ServiceFeature";
 import { ServiceHeader } from "../_components/ServiceHeader";
-import { Code, Workflow } from "lucide-react";
 
 export default function SoftwareArchitecturePage() {
   return (
     <main className="relative bg-primary/10">
-      <BackgroundRoundedBlur />
       <ServiceHeader
         title="Software Architecture & Automation Solutions"
         description="Expert consulting, training, development, and support to streamline and automate business processes."

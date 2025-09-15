@@ -220,9 +220,9 @@ const Navbar = ({
                                 ]
                               }
                               {openSubmenu === item.name ? (
-                                <ChevronDown className="w-6 h-6" />
-                              ) : (
                                 <ChevronUp className="w-6 h-6" />
+                              ) : (
+                                <ChevronDown className="w-6 h-6" />
                               )}
                             </button>
                             <AnimatePresence>

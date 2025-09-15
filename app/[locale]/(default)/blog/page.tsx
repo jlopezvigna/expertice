@@ -27,7 +27,7 @@ export default async function BlogPage({
         <section className="py-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {blogPosts.map((blog, idx) => (
-              <div key={idx}>
+              <div key={idx} className="flex">
                 <BlogCard
                   index={idx}
                   href={`/${locale}${blog.href}`}

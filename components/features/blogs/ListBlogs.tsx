@@ -13,8 +13,9 @@ export default function ListBlogs({ blogPosts, locale }: ListBlogsProps) {
   return (
     <>
       {blogPosts.map((blog, idx) => (
-        <BlurFade key={idx} delay={0.25 + idx * 0.05} inView>
+        <BlurFade className="flex" key={idx} delay={0.25 + idx * 0.05} inView>
           <BlogCard
+            className="flex-1"
             index={idx}
             key={idx}
             href={`/${locale}/${blog.href}`}

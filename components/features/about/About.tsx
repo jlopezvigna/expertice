@@ -3,7 +3,6 @@
 import { HeroVideoDialog } from "@/components/magic/hero-video-dialog";
 import { InteractiveHoverButton } from "@/components/magic/interactive-button";
 import { Badge } from "@/components/ui/badge";
-import { company_check } from "@/constants";
 import { getTranslations, Locale } from "@/lib/i18n";
 import { motion, useInView } from "framer-motion";
 import { Check } from "lucide-react";
@@ -70,19 +69,37 @@ const About = ({
             </motion.p>
 
             <motion.div variants={containerVariants} className="space-y-4 mb-8">
-              {company_check.map((feature, index) => (
+              {[
+                translations.about.checklist.years,
+                translations.about.checklist.clients,
+              ].map((feature, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="flex items-center gap-3"
+                  className="flex items-center gap-4"
                 >
-                  <Check className="w-5 h-5 text-primary" />
-                  <span className="text-md text-muted-foreground">
+                  <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Check className="w-3 h-3 text-primary stroke-[4.5]" />
+                  </div>
+                  <span className="text-md text-muted-foreground ">
                     {feature}
                   </span>
                 </motion.div>
               ))}
             </motion.div>
+
+            {/* <ul className="list-disc list-inside text-muted-foreground mt-2">
+              {testimonials[active].bulletPoints.map((b) => {
+                return (
+                  <li key={b} className="flex items-center gap-4 mb-4">
+                    <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-3 h-3 text-primary stroke-[4.5]" />
+                    </div>
+                    <p className="text-sm text-gray-500 break-words">{b}</p>
+                  </li>
+                );
+              })}
+            </ul> */}
 
             <InteractiveHoverButton>
               <Link href={`/${locale}/about`}>Learn More</Link>
